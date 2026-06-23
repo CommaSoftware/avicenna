@@ -1,0 +1,182 @@
+.cms-content {
+  --cms-content-color-primary: var(--color-elem-primary);
+  --cms-content-color-secondary: var(--color-elem-secondary);
+  --cms-content-color-accent: var(--color-elem-primary-highlight);
+  --cms-content-font-size: var(--font-size-span-m);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cms-content {
+  word-wrap: break-word;
+}
+
+.cms-content a:not(.button) {
+  color: var(--color-elem-accent-primary-alt);
+  text-decoration: none;
+}
+
+.cms-content a:not(.button):hover,
+.cms-content a:not(.button):active {
+  text-decoration: 1px dotted underline;
+}
+
+.cms-content h1,
+.cms-content h2,
+.cms-content h3,
+.cms-content h4,
+.cms-content h5,
+.cms-content h6 {
+  --heading-font-size: var(--font-size-h2);
+  --heading-color: var(--cms-content-color-primary);
+  --heading-font-weight: 600;
+
+  font-family: var(--font-name-heading);
+  color: var(--heading-color);
+  font-size: var(--heading-font-size);
+  font-weight: var(--heading-font-weight);
+  letter-spacing: var(--font-letter-spacing);
+}
+
+.cms-content h1 {
+  --heading-font-size: var(--font-size-h1);
+}
+
+.cms-content h2 {
+  --heading-font-size: var(--font-size-h2);
+}
+
+.cms-content h3 {
+  --heading-font-size: var(--font-size-h3);
+  color: var(--cms-content-color-accent);
+}
+
+.cms-content h4 {
+  --heading-font-size: var(--font-size-h4);
+}
+
+.cms-content h5 {
+  --heading-font-size: var(--font-size-h5);
+  color: var(--cms-content-color-accent);
+}
+
+.cms-content h6 {
+  --heading-font-size: var(--font-size-h6);
+  color: var(--cms-content-color-accent);
+}
+
+.cms-content p,
+.cms-content li {
+  color: var(--cms-content-color-primary);
+  font-size: var(--cms-content-font-size);
+  font-weight: 500;
+  letter-spacing: var(--font-letter-spacing);
+  line-height: 145%;
+}
+
+.cms-content ul,
+.cms-content ol {
+  padding-left: 20px;
+}
+
+.cms-content ul li::marker {
+  content: "•  ";
+}
+
+.cms-content ul.checked-list li {
+  position: relative;
+  list-style-type: none;
+}
+.cms-content ul.checked-list li::marker {
+  content: "";
+}
+.cms-content ul.checked-list li::before {
+  content: "";
+  position: absolute;
+  left: calc(-4px - 1em);
+  display: inline-block;
+  aspect-ratio: 1/1;
+  height: 1em;
+  background-image: url("../images/icons/checkbox-checked-filled.svg");
+  background-size: contain;
+  filter: brightness(650%) hue-rotate(170deg) contrast(450%);
+  transform: translateY(2px);
+}
+
+.cms-content hr {
+  border: 1px solid var(--color-border-tertiary);
+}
+
+.cms-content img {
+  width: 100%;
+  border-radius: var(--border-radius-s);
+}
+
+.cms-content blockquote {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+  padding: 20px 24px;
+  border-left: 2px solid var(--cms-content-color-accent);
+  background-color: var(--color-bg-secondary-highlight);
+}
+
+.cms-content cite {
+  color: var(--cms-content-color-secondary);
+  font-size: var(--font-size-span-xs);
+  letter-spacing: var(--font-letter-spacing);
+  font-weight: 500;
+  font-style: normal;
+}
+
+.cms-content blockquote cite {
+  color: var(--cms-content-color-accent);
+  font-weight: 600;
+}
+
+.wp-block-file__button,
+.wp-block-button__link {
+  --button-color-preset-primary: var(--color-elem-primary);
+  --button-padding-side: 8px;
+  --button-height: 40px;
+  --button-color-text: var(--color-elem-primary-alt);
+  --button-color-hovered: var(--color-elem-accent-primary-alt);
+  --button-bg: var(--button-color-preset-primary);
+  --button-color-border: var(--button-bg);
+  --button-font-size: var(--font-size-span-ml);
+  --button-border-radius: var(--border-radius-s);
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  box-sizing: border-box;
+  min-height: var(--button-height);
+  padding: 0 calc(var(--button-padding-side) + 4px) !important;
+  border: 2px solid var(--button-color-border);
+  border-radius: var(--button-border-radius);
+  color: var(--button-color-text) !important;
+  background: var(--button-bg);
+  font-size: var(--button-font-size);
+  font-weight: 500;
+  white-space: nowrap;
+  letter-spacing: var(--font-letter-spacing);
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition-m);
+}
+
+.wp-block-file__button {
+  --button-padding-side: 4px;
+  --button-height: 24px;
+  --button-font-size: var(--font-size-span-xxs);
+  font-weight: 600;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+  --button-bg: transparent;
+  --button-color-border: var(--button-color-preset-primary);
+  --button-color-text: var(--button-color-preset-primary);
+}

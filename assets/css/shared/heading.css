@@ -1,0 +1,42 @@
+.heading {
+  --heading-font-size: var(--font-size-h2);
+  --heading-color: var(--color-elem-primary);
+  --heading-font-weight: 600;
+
+  font-family: var(--font-name-heading);
+  color: var(--heading-color);
+  font-size: var(--heading-font-size);
+  font-weight: var(--heading-font-weight);
+}
+
+.heading.is-size-h1 {
+  --heading-font-size: var(--font-size-h1);
+}
+
+.heading.is-size-h2 {
+  --heading-font-size: var(--font-size-h2);
+}
+
+.heading.is-size-h3 {
+  --heading-font-size: var(--font-size-h3);
+}
+
+.heading.is-size-h4 {
+  --heading-font-size: var(--font-size-h4);
+}
+
+.heading.is-size-h5 {
+  --heading-font-size: var(--font-size-h5);
+}
+
+.heading.is-size-h6 {
+  --heading-font-size: var(--font-size-h6);
+}
+
+.heading.is-white {
+  color: var(--color-bg-primary);
+}
+
+.heading.is-hilight {
+  color: var(--color-elem-secondary-highlight);
+}

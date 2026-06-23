@@ -1,0 +1,86 @@
+/* ---------------- Всплывающие изображения ---------------- */
+.cms-content img {
+  cursor: zoom-in;
+}
+
+.float-window {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20000;
+  opacity: 0;
+  transition: 150ms;
+}
+
+.float-window-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000f2;
+  cursor: zoom-out;
+}
+
+.float-window_close-btn {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  transition: 0.2s;
+  border-radius: 5px;
+}
+
+.float-window_close-btn svg:hover {
+  transform: rotate(90deg);
+}
+
+.float-window_close-btn svg {
+  width: 20px;
+}
+
+.float-window_close-btn path {
+  fill: var(--color-bg-primary);
+}
+
+.float-window img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1002;
+  transform: translate(-50%, -50%);
+  max-height: calc(100vh - 20px);
+  max-width: calc(100vw - 80px);
+  border-radius: var(--border-radius-card-s);
+  box-shadow: 0 0 10px #0009;
+}
+
+/* ----------------------------------------- Адаптация ---------------------------------------- */
+
+/* Планшеты и телефоны */
+@media only screen and (max-width: 900px) {
+  .float-window-bg {
+    background-color: #000;
+  }
+
+  .float-window img {
+    max-height: calc(100vh - 100px);
+    max-width: calc(100vw);
+    border-radius: 0;
+  }
+
+  .float-window_close-btn {
+    width: 35px;
+    height: 35px;
+    top: auto;
+    right: 15px;
+    top: 15px;
+  }
+}

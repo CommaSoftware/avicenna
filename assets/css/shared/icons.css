@@ -1,0 +1,209 @@
+.icon {
+  --icon-size: 16px;
+  --icon-filter-white: grayscale(1) brightness(20);
+  --icon-filter-blue: brightness(380%) hue-rotate(30deg) contrast(150%);
+  --icon-filter-accent: brightness(650%) hue-rotate(170deg) contrast(450%);
+  --icon-filter-yellow: brightness(650%) hue-rotate(202deg) contrast(450%);
+  --icon-filter-hilight: brightness(370%) hue-rotate(-10deg) contrast(50%);
+  --icon-filter-clear: none;
+
+  display: inline-block;
+  height: var(--icon-size);
+  aspect-ratio: 1/1;
+  background-size: contain;
+}
+
+.icon[data-type="arrow-reload"] {
+  background-image: url("../../images/icons/arrow-reload.svg");
+}
+
+.icon[data-type="arrow-right-md"] {
+  background-image: url("../../images/icons/arrow-right-md.svg");
+}
+.icon[data-type="arrow-undo"] {
+  background-image: url("../../images/icons/arrow-undo.svg");
+}
+.icon[data-type="arrow-up-md"] {
+  background-image: url("../../images/icons/arrow-up-md.svg");
+}
+.icon[data-type="arrow-up-right-md"] {
+  background-image: url("../../images/icons/arrow-up-right-md.svg");
+}
+.icon[data-type="arrow-up-right"] {
+  background-image: url("../../images/icons/arrow-up-right.svg");
+}
+.icon[data-type="building"] {
+  background-image: url("../../images/icons/building.svg");
+}
+.icon[data-type="chat-conversation"] {
+  background-image: url("../../images/icons/chat-conversation.svg");
+}
+.icon[data-type="check"] {
+  background-image: url("../../images/icons/check.svg");
+}
+.icon[data-type="checkbox-checked"] {
+  background-image: url("../../images/icons/checkbox-checked.svg");
+}
+.icon[data-type="checkbox-checked-filled"] {
+  background-image: url("../../images/icons/checkbox-checked-filled.svg");
+}
+.icon[data-type="chervon-down"] {
+  background-image: url("../../images/icons/chervon-down.svg");
+}
+.icon[data-type="chervon-left"] {
+  background-image: url("../../images/icons/chervon-left.svg");
+}
+.icon[data-type="chervon-right-l"] {
+  background-image: url("../../images/icons/chervon-right-l.svg");
+}
+.icon[data-type="chervon-right"] {
+  background-image: url("../../images/icons/chervon-right.svg");
+}
+.icon[data-type="chervon-up"] {
+  background-image: url("../../images/icons/chervon-up.svg");
+}
+.icon[data-type="close"] {
+  background-image: url("../../images/icons/close.svg");
+}
+.icon[data-type="cog"] {
+  background-image: url("../../images/icons/cog.svg");
+}
+.icon[data-type="cylinder"] {
+  background-image: url("../../images/icons/cylinder.svg");
+}
+.icon[data-type="dots-diagonal"] {
+  background-image: url("../../images/icons/dots-diagonal.svg");
+}
+.icon[data-type="dots-vertical"] {
+  background-image: url("../../images/icons/dots-vertical.svg");
+}
+.icon[data-type="download"] {
+  background-image: url("../../images/icons/download.svg");
+}
+.icon[data-type="email"] {
+  background-image: url("../../images/icons/email.svg");
+}
+.icon[data-type="filter-off"] {
+  background-image: url("../../images/icons/filter-off.svg");
+}
+.icon[data-type="filter"] {
+  background-image: url("../../images/icons/filter.svg");
+}
+.icon[data-type="google"] {
+  background-image: url("../../images/icons/google.svg");
+}
+.icon[data-type="grid"] {
+  background-image: url("../../images/icons/grid.svg");
+}
+.icon[data-type="hamburger"] {
+  background-image: url("../../images/icons/hamburger.svg");
+}
+.icon[data-type="help"] {
+  background-image: url("../../images/icons/help.svg");
+}
+.icon[data-type="info"] {
+  background-image: url("../../images/icons/info.svg");
+}
+.icon[data-type="leaf"] {
+  background-image: url("../../images/icons/leaf.svg");
+}
+.icon[data-type="link-horizontal"] {
+  background-image: url("../../images/icons/link-horizontal.svg");
+}
+.icon[data-type="list-unordered"] {
+  background-image: url("../../images/icons/list-unordered.svg");
+}
+.icon[data-type="map-pin"] {
+  background-image: url("../../images/icons/map-pin.svg");
+}
+.icon[data-type="ok"] {
+  background-image: url("../../images/icons/ok.svg");
+}
+.icon[data-type="phone"] {
+  background-image: url("../../images/icons/phone.svg");
+}
+.icon[data-type="play-filled"] {
+  background-image: url("../../images/icons/play-filled.svg");
+}
+.icon[data-type="max"] {
+  background-image: url("../../images/icons/max.svg");
+}
+.icon[data-type="max-filled"] {
+  background-image: url("../../images/icons/max-filled.svg");
+}
+.icon[data-type="play"] {
+  background-image: url("../../images/icons/play.svg");
+}
+.icon[data-type="puzzle"] {
+  background-image: url("../../images/icons/puzzle.svg");
+}
+.icon[data-type="radio-fill"] {
+  background-image: url("../../images/icons/radio-fill.svg");
+}
+.icon[data-type="radio"] {
+  background-image: url("../../images/icons/radio.svg");
+}
+.icon[data-type="ruler"] {
+  background-image: url("../../images/icons/ruler.svg");
+}
+.icon[data-type="shopping-bag"] {
+  background-image: url("../../images/icons/shopping-bag.svg");
+}
+.icon[data-type="star-filled"] {
+  background-image: url("../../images/icons/star-filled.svg");
+}
+.icon[data-type="star"] {
+  background-image: url("../../images/icons/star.svg");
+}
+.icon[data-type="telegramm-filled"] {
+  background-image: url("../../images/icons/telegramm-filled.svg");
+}
+.icon[data-type="telegramm"] {
+  background-image: url("../../images/icons/telegramm.svg");
+}
+.icon[data-type="timer"] {
+  background-image: url("../../images/icons/timer.svg");
+}
+.icon[data-type="truck"] {
+  background-image: url("../../images/icons/truck.svg");
+}
+.icon[data-type="user-square"] {
+  background-image: url("../../images/icons/user-square.svg");
+}
+.icon[data-type="vk"] {
+  background-image: url("../../images/icons/vk.svg");
+}
+.icon[data-type="volume"] {
+  background-image: url("../../images/icons/volume.svg");
+}
+.icon[data-type="water-drop"] {
+  background-image: url("../../images/icons/water-drop.svg");
+}
+.icon[data-type="waving-help"] {
+  background-image: url("../../images/icons/waving-help.svg");
+}
+.icon[data-type="wavy-check"] {
+  background-image: url("../../images/icons/wavy-check.svg");
+}
+.icon[data-type="weight"] {
+  background-image: url("../../images/icons/weight.svg");
+}
+.icon[data-type="yandex"] {
+  background-image: url("../../images/icons/yandex.svg");
+}
+
+.icon.is-color-white {
+  filter: var(--icon-filter-white) !important;
+}
+
+.icon.is-color-hilight {
+  filter: var(--icon-filter-hilight) !important;
+}
+
+.icon.is-color-accent {
+  filter: var(--icon-filter-accent) !important;
+}
+
+.icon.is-color-blue {
+  filter: var(--icon-filter-blue) !important;
+}

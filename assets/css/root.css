@@ -1,0 +1,180 @@
+:root {
+  --font-name: "Comissioner", sans-serif;
+  --font-name-heading: "Nunito", sans-serif;
+  --font-letter-spacing: -0.0025em;
+  --font-size-span-xxs: 13px;
+  --font-size-span-xs: 14px;
+  --font-size-span-s: 15px;
+  --font-size-span-m: 16px;
+  --font-size-span-ml: 17px;
+  --font-size-h6: 14px;
+  --font-size-h5: 16px;
+  --font-size-h4: 18px;
+  --font-size-h3: 22px;
+  --font-size-h2: 28px;
+  --font-size-h1: 32px;
+
+  --border-radius-s: 2px;
+  --border-radius-m: 4px;
+  --border-radius-l: 8px;
+  --border-radius-e: 99999px;
+
+  --header-height: 116px;
+  --spacing-block: 32px;
+  --spacing-section: 64px;
+
+  /* Colors */
+
+  --color-elem-primary: #002029;
+  --color-elem-primary-alt: var(--color-bg-primary);
+  --color-elem-primary-highlight: #036e3d;
+  --color-elem-secondary: #818e87;
+  --color-elem-secondary-highlight: #4d8365;
+  --color-elem-accent-primary: #fa941c;
+  --color-elem-accent-secondary: #ffa61c;
+  --color-elem-accent-primary-alt: #0060dd;
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f3f3f3;
+  --color-bg-tertiary: #f0f0f0;
+  --color-bg-secondary-highlight: #e3f5ed;
+  --color-bg-secondary-highlight-alt: #f5efe3;
+  --color-bg-tertiary-highlight: #ecf0ee;
+  --color-bg-accent: #fff2e1;
+  --color-bg-accent-alt: #e1e9f3;
+  --color-border-primary: #e4f2e9;
+  --color-border-secondary: #d1e8d9;
+  --color-border-tertiary: #d1dcd9;
+  --color-static-yellow: #ffc107;
+
+  --gradient-accent: radial-gradient(
+    at left top,
+    var(--color-elem-accent-secondary),
+    var(--color-elem-accent-primary)
+  );
+  --gradient-background: linear-gradient(
+    to bottom,
+    var(--color-bg-primary),
+    var(--color-bg-secondary-highlight)
+  );
+  --gradient-background-secondary-tertiary: linear-gradient(
+    to bottom,
+    var(--color-bg-secondary),
+    var(--color-bg-tertiary)
+  );
+  --gradient-blog-cover: linear-gradient(
+    to right bottom,
+    var(--color-bg-secondary-highlight),
+    var(--color-border-secondary)
+  );
+
+  /* Shadows */
+  --shadow-button: 0px 1px 2px -1px var(--color-elem-primary);
+  --shadow-button-inset: inset 0px 1px 2px -1px var(--color-elem-primary);
+  --shadow-card-s: 0px 2px 4px -2px rgba(0, 39, 41, 24%);
+  --shadow-card:
+    0px -2px 24px 0px rgba(0, 39, 41, 4%),
+    0px 16px 16px -16px rgba(0, 39, 41, 24%);
+  --shadow-tooltip: 0 4px 8px -2px rgba(0, 39, 41, 24%);
+
+  /* Transition times */
+  --transition-m: 150ms cubic-bezier(0, 0.55, 0.45, 1);
+  --transition-ml: 200ms cubic-bezier(0, 0.55, 0.45, 1);
+  --transition-l: 500ms cubic-bezier(0, 0.55, 0.45, 1);
+
+  /* Column System */
+
+  --max-width-content-area: 1432px;
+  --padding-content-area: 16px;
+  --space-column-gap: 12px;
+  --gap-sections: 64px;
+  --gap-blocks: 32px;
+
+  --column-count: 12;
+
+  --space-column-plus-gap: calc(
+    (
+        var(--max-width-content-area) - var(--padding-content-area) * 2 +
+          var(--space-column-gap)
+      ) /
+      var(--column-count)
+  );
+  --space-column: calc(var(--space-column-plus-gap) - var(--space-column-gap));
+  --space-column-2: calc(
+    (var(--space-column-plus-gap)) * 2 - var(--space-column-gap)
+  );
+  --space-column-3: calc(
+    (var(--space-column-plus-gap)) * 3 - var(--space-column-gap)
+  );
+  --space-column-4: calc(
+    (var(--space-column-plus-gap)) * 4 - var(--space-column-gap)
+  );
+  --space-column-5: calc(
+    (var(--space-column-plus-gap)) * 5 - var(--space-column-gap)
+  );
+  --space-column-6: calc(
+    (var(--space-column-plus-gap)) * 6 - var(--space-column-gap)
+  );
+  --space-column-8: calc(
+    (var(--space-column-plus-gap)) * 8 - var(--space-column-gap)
+  );
+  --space-column-9: calc(
+    (var(--space-column-plus-gap)) * 9 - var(--space-column-gap)
+  );
+}
+
+@keyframes thunder {
+  0% {
+    opacity: 0%;
+    transform: rotate(180deg);
+  }
+  5% {
+    opacity: 100%;
+  }
+  15% {
+    opacity: 35%;
+  }
+  30% {
+    opacity: 15%;
+  }
+  100% {
+    opacity: 0%;
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes thunder-double {
+  0% {
+    opacity: 0%;
+    transform: rotate(180deg);
+  }
+  3.5% {
+    opacity: 100%;
+  }
+  10% {
+    opacity: 35%;
+  }
+  20% {
+    opacity: 15%;
+  }
+  66.4999% {
+    opacity: 0%;
+    transform: rotate(180deg);
+  }
+  66.5% {
+    opacity: 0%;
+    transform: rotate(0deg);
+  }
+  68% {
+    opacity: 100%;
+  }
+  75% {
+    opacity: 35%;
+  }
+  80% {
+    opacity: 15%;
+  }
+  100% {
+    opacity: 0%;
+    transform: rotate(0deg);
+  }
+}

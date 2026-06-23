@@ -1,0 +1,47 @@
+.span {
+  color: var(--color-elem-primary);
+  letter-spacing: var(--font-letter-spacing);
+  font-family: var(--font-name);
+  font-size: var(--font-size-span-m);
+  font-weight: 500;
+}
+
+.span.is-hilight {
+  color: var(--color-elem-secondary-highlight);
+}
+
+.span.is-white {
+  color: var(--color-bg-primary);
+}
+
+.span.is-size-xs {
+  font-size: var(--font-size-span-xs);
+}
+
+.span.is-size-s {
+  font-size: var(--font-size-span-s);
+}
+
+.span.is-size-m {
+  font-size: var(--font-size-span-m);
+}
+
+.span.is-size-ml {
+  font-size: var(--font-size-span-ml);
+}
+
+.span a {
+  color: var(--color-elem-secondary-highlight);
+  text-decoration: 1px underline dotted;
+  transition: var(--transition-m);
+}
+
+.span a:hover,
+.span a:active {
+  color: var(--color-elem-accent-primary-alt);
+  text-decoration: 1px underline solid;
+}
+
+.span.is-white a {
+  color: var(--color-bg-primary);
+}
