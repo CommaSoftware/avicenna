@@ -2,6 +2,7 @@
   --icon-size: 16px;
   --icon-filter-white: grayscale(1) brightness(20);
   --icon-filter-blue: brightness(380%) hue-rotate(30deg) contrast(150%);
+  --icon-filter-alt: brightness(550%) hue-rotate(208deg) contrast(150%);
   --icon-filter-accent: brightness(650%) hue-rotate(170deg) contrast(450%);
   --icon-filter-yellow: brightness(650%) hue-rotate(202deg) contrast(450%);
   --icon-filter-hilight: brightness(370%) hue-rotate(-10deg) contrast(50%);
@@ -202,6 +203,10 @@
 
 .icon.is-color-accent {
   filter: var(--icon-filter-accent) !important;
+}
+
+.icon.is-color-alt {
+  filter: var(--icon-filter-alt) !important;
 }
 
 .icon.is-color-blue {

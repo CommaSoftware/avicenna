@@ -1,8 +1,8 @@
 :root {
-  --font-name: "Comissioner", sans-serif;
-  --font-name-heading: "Nunito", sans-serif;
+  --font-name-heading: "Comissioner", sans-serif;
+  --font-name: "Nunito", sans-serif;
   --font-letter-spacing: -0.0025em;
-  --font-size-span-xxs: 13px;
+  --font-size-span-xxs: 12px;
   --font-size-span-xs: 14px;
   --font-size-span-s: 15px;
   --font-size-span-m: 16px;
@@ -14,12 +14,12 @@
   --font-size-h2: 28px;
   --font-size-h1: 32px;
 
-  --border-radius-s: 2px;
-  --border-radius-m: 4px;
-  --border-radius-l: 8px;
+  --border-radius-s: 8px;
+  --border-radius-m: 16px;
+  --border-radius-l: 24px;
   --border-radius-e: 99999px;
 
-  --header-height: 116px;
+  --header-height: 68px;
   --spacing-block: 32px;
   --spacing-section: 64px;
 
@@ -32,7 +32,7 @@
   --color-elem-secondary-highlight: #4d8365;
   --color-elem-accent-primary: #fa941c;
   --color-elem-accent-secondary: #ffa61c;
-  --color-elem-accent-primary-alt: #0060dd;
+  --color-elem-accent-primary-alt: #fa801c;
   --color-bg-primary: #ffffff;
   --color-bg-secondary: #f3f3f3;
   --color-bg-tertiary: #f0f0f0;

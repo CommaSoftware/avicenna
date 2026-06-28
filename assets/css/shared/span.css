@@ -14,6 +14,10 @@
   color: var(--color-bg-primary);
 }
 
+.span.is-size-xxs {
+  font-size: var(--font-size-span-xxs);
+}
+
 .span.is-size-xs {
   font-size: var(--font-size-span-xs);
 }

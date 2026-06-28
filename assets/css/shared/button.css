@@ -216,7 +216,7 @@
 .button:not(.is-no-hover).is-style-primary:active .icon,
 .button:not(.is-no-hover).is-style-transparent:hover .icon,
 .button:not(.is-no-hover).is-style-transparent:active .icon {
-  filter: var(--icon-filter-blue);
+  filter: var(--icon-filter-alt);
 }
 
 .button:not(.is-no-hover).is-hilight:hover .icon,

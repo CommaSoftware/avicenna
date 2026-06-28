@@ -1,0 +1,188 @@
+.dropdown-menu > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown-menu li {
+  list-style-type: none;
+}
+
+.dropdown-menu a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  box-sizing: border-box;
+  min-height: 28px;
+  padding: 0 8px;
+  border-radius: var(--border-radius-s);
+  color: var(--color-elem-primary);
+  font-size: var(--font-size-span-m);
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: var(--font-letter-spacing);
+  text-decoration: none;
+  transition: var(--transition-m);
+  width: 100%;
+  min-width: max-content;
+}
+
+.dropdown-menu > ul > li {
+  position: relative;
+}
+
+.dropdown-menu > ul > li > a {
+  white-space: nowrap;
+  transition: var(--transition-m);
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:active {
+  color: var(--color-elem-accent-primary-alt);
+  text-decoration: underline dotted;
+}
+
+.dropdown-menu > ul > li > a:hover::after,
+.dropdown-menu > ul > li > a:active::after {
+  filter: var(--icon-filter-alt);
+}
+
+.dropdown-menu.is-style-bordered a {
+  padding: 0 8px;
+}
+
+.dropdown-menu.is-style-bordered > ul > li > a {
+  border: 2px solid var(--color-elem-primary);
+}
+
+.dropdown-menu.is-style-bordered > ul > li > a:hover,
+.dropdown-menu.is-style-bordered > ul > li > a:active {
+  color: var(--color-elem-primary);
+  text-decoration: none;
+}
+
+.dropdown-menu.is-style-bordered > ul > li > a:hover::after,
+.dropdown-menu.is-style-bordered > ul > li > a:active::after {
+  filter: var(--icon-filter-white);
+}
+
+/* Примечание: код ниже добавляет функционал сворачивания списка и разделён на два дублирующих блока (отдельно для всех ".dropdown-menu" и отдельно для ".is-only-desktop") */
+
+.dropdown-menu:not(.is-only-desktop) > ul > li:has(ul) > a::after {
+  content: "";
+  --icon-filter-alt: brightness(550%) hue-rotate(208deg) contrast(150%);
+
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  aspect-ratio: 1/1;
+  background-size: contain;
+  background-image: url("../../images/icons/chervon-down.svg");
+}
+.dropdown-menu:not(.is-only-desktop) > ul > li > ul {
+  position: absolute;
+  z-index: 10;
+  top: calc(100% + 4px);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  left: 50%;
+  padding: 8px 4px;
+  transform: translate(-50%, 0);
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--border-radius-s);
+  box-shadow: var(--shadow-button);
+  transition: var(--transition-m);
+}
+
+.dropdown-menu:not(.is-only-desktop) > ul > li > ul::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+}
+
+.dropdown-menu:not(.is-only-desktop) > ul > li > ul::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 8px;
+  height: 8px;
+  border-radius: var(--border-radius-s);
+  border-left: 1px solid var(--color-border-primary);
+  border-top: 1px solid var(--color-border-primary);
+  background-color: var(--color-bg-primary);
+}
+
+.dropdown-menu:not(.is-only-desktop) > ul > li:not(:hover) > ul {
+  transform: translate(-50%, -12px);
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .dropdown-menu.is-only-desktop > ul > li:has(ul) > a::after {
+    content: "";
+    --icon-filter-alt: brightness(550%) hue-rotate(208deg) contrast(150%);
+
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    aspect-ratio: 1/1;
+    background-size: contain;
+    background-image: url("../../images/icons/chervon-down.svg");
+  }
+  .dropdown-menu.is-only-desktop > ul > li > ul {
+    position: absolute;
+    z-index: 10;
+    top: calc(100% + 4px);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    left: 50%;
+    padding: 8px 4px;
+    transform: translate(-50%, 0);
+    background-color: var(--color-bg-primary);
+    border: 1px solid var(--color-border-primary);
+    border-radius: var(--border-radius-s);
+    box-shadow: var(--shadow-button);
+    transition: var(--transition-m);
+  }
+
+  .dropdown-menu.is-only-desktop > ul > li > ul::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+  }
+
+  .dropdown-menu.is-only-desktop > ul > li > ul::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 8px;
+    height: 8px;
+    border-radius: var(--border-radius-s);
+    border-left: 1px solid var(--color-border-primary);
+    border-top: 1px solid var(--color-border-primary);
+    background-color: var(--color-bg-primary);
+  }
+
+  .dropdown-menu.is-only-desktop > ul > li:not(:hover) > ul {
+    transform: translate(-50%, -12px);
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+  }
+}
