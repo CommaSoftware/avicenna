@@ -1,0 +1,12 @@
+.not-found {
+  padding-top: calc(var(--gap-sections) * 2);
+  padding-bottom: var(--gap-sections);
+}
+
+.not-found .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}

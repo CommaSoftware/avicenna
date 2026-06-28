@@ -5,7 +5,7 @@
   --icon-filter-alt: brightness(550%) hue-rotate(208deg) contrast(150%);
   --icon-filter-accent: brightness(650%) hue-rotate(170deg) contrast(450%);
   --icon-filter-yellow: brightness(650%) hue-rotate(202deg) contrast(450%);
-  --icon-filter-hilight: brightness(370%) hue-rotate(-10deg) contrast(50%);
+  --icon-filter-hilight: brightness(370%) hue-rotate(316deg) contrast(50%);
   --icon-filter-clear: none;
 
   display: inline-block;

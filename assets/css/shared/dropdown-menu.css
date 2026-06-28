@@ -35,6 +35,7 @@
 .dropdown-menu > ul > li > a {
   white-space: nowrap;
   transition: var(--transition-m);
+  cursor: pointer;
 }
 
 .dropdown-menu a:hover,
