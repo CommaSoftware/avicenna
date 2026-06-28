@@ -1,0 +1,9 @@
+.logo-full img {
+  height: 100%;
+  max-height: 32px;
+}
+
+/* ---------- Adaptation ---------- */
+
+@media screen and (max-width: 480px) {
+}
