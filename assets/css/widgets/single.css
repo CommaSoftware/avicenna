@@ -6,8 +6,18 @@
   background-color: var(--color-bg-secondary-highlight);
 }
 
+.single-header.is-style-secondary {
+  background-color: var(--color-bg-primary);
+  border-bottom: 1px solid var(--color-border-secondary);
+}
+
 .single-header .breadcrumbs {
   padding: 0;
+}
+
+.single-header.is-style-secondary .breadcrumbs .breadcrumbs__item,
+.single-header.is-style-secondary .breadcrumbs .breadcrumbs__item a {
+  color: var(--color-elem-secondary);
 }
 
 .single-header .content-wrapper {
