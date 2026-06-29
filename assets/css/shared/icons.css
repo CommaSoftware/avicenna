@@ -12,6 +12,7 @@
   height: var(--icon-size);
   aspect-ratio: 1/1;
   background-size: contain;
+  transition: none !important;
 }
 
 .icon[data-type="arrow-reload"] {

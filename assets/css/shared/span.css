@@ -6,8 +6,12 @@
   font-weight: 500;
 }
 
+.span.is-secondary {
+  color: var(--color-elem-secondary);
+}
+
 .span.is-hilight {
-  color: var(--color-elem-secondary-highlight);
+  color: var(--color-elem-primary-highlight);
 }
 
 .span.is-white {
