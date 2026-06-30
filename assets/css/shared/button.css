@@ -62,7 +62,7 @@
   --button-color-text: var(--button-color-preset-primary);
 }
 
-.button.is-hilight {
+.button.is-highlight {
   --button-color-preset-primary: var(--color-elem-secondary-highlight);
   --button-color-hovered: var(--color-elem-primary-highlight);
   --button-bg: var(--color-bg-secondary-highlight);
@@ -142,15 +142,15 @@
   --icon-size: 13px;
 }
 
-.button.button.is-style-secondary .icon,
+.button.is-style-secondary .icon,
 .button.is-style-bordered .icon {
   filter: var(--icon-filter-clear);
 }
 
-.button.is-hilight .icon,
-.button.is-hilight.is-style-secondary .icon,
-.button.is-hilight.is-style-transparent .icon {
-  filter: var(--icon-filter-hilight);
+.button.is-highlight .icon,
+.button.is-highlight.is-style-secondary .icon,
+.button.is-highlight.is-style-transparent .icon {
+  filter: var(--icon-filter-highlight);
 }
 
 .button.is-style-primary .icon,
@@ -166,8 +166,8 @@
   --button-color-text: var(--button-color-hovered);
 }
 
-.button.is-hilight:not(.is-no-hover):hover,
-.button.is-hilight:not(.is-no-hover):active {
+.button.is-highlight:not(.is-no-hover):hover,
+.button.is-highlight:not(.is-no-hover):active {
   --button-bg: var(--color-bg-secondary-highlight);
 }
 
@@ -229,13 +229,13 @@
   filter: var(--icon-filter-alt);
 }
 
-.button:not(.is-no-hover).is-hilight:hover .icon,
-.button:not(.is-no-hover).is-hilight:active .icon,
-.button:not(.is-no-hover).is-hilight.is-style-secondary:hover .icon,
-.button:not(.is-no-hover).is-hilight.is-style-secondary:active .icon,
-.button:not(.is-no-hover).is-hilight.is-style-transparent:hover .icon,
-.button:not(.is-no-hover).is-hilight.is-style-transparent:active .icon {
-  filter: var(--icon-filter-hilight);
+.button:not(.is-no-hover).is-highlight:hover .icon,
+.button:not(.is-no-hover).is-highlight:active .icon,
+.button:not(.is-no-hover).is-highlight.is-style-secondary:hover .icon,
+.button:not(.is-no-hover).is-highlight.is-style-secondary:active .icon,
+.button:not(.is-no-hover).is-highlight.is-style-transparent:hover .icon,
+.button:not(.is-no-hover).is-highlight.is-style-transparent:active .icon {
+  filter: var(--icon-filter-highlight);
 }
 
 .button:not(.is-no-hover).is-style-bordered:hover .icon,
@@ -264,6 +264,12 @@
   box-shadow: var(--shadow-button-inset);
 }
 
+.button.is-style-secondary-alt,
+.button.is-style-secondary-alt:hover,
+.button.is-style-secondary-alt:active {
+  --button-bg: var(--color-bg-primary);
+}
+
 /* Exclusive style */
 
 .button.is-style-readmore {
@@ -280,7 +286,7 @@
 .button.is-style-readmore .icon,
 .button.is-style-readmore:hover .icon,
 .button.is-style-readmore:active .icon {
-  filter: var(--icon-filter-hilight);
+  filter: var(--icon-filter-highlight);
 }
 
 .button.is-style-readmore:hover,

@@ -37,6 +37,6 @@
   color: var(--color-bg-primary);
 }
 
-.heading.is-hilight {
+.heading.is-highlight {
   color: var(--color-elem-secondary-highlight);
 }

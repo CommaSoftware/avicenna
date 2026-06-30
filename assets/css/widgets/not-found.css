@@ -1,6 +1,7 @@
 .not-found {
-  padding-top: calc(var(--gap-sections) * 2);
-  padding-bottom: var(--gap-sections);
+  padding: calc(var(--gap-sections) * 2) 0;
+  margin-bottom: calc(0px - var(--gap-sections));
+  border-bottom: 1px solid var(--color-border-secondary);
 }
 
 .not-found .content-wrapper {

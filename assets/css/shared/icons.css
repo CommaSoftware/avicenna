@@ -5,7 +5,7 @@
   --icon-filter-alt: brightness(550%) hue-rotate(208deg) contrast(150%);
   --icon-filter-accent: brightness(650%) hue-rotate(170deg) contrast(450%);
   --icon-filter-yellow: brightness(650%) hue-rotate(202deg) contrast(450%);
-  --icon-filter-hilight: brightness(370%) hue-rotate(316deg) contrast(50%);
+  --icon-filter-highlight: brightness(370%) hue-rotate(316deg) contrast(50%);
   --icon-filter-gray: hue-rotate(316deg) contrast(0%);
   --icon-filter-clear: none;
 
@@ -194,13 +194,19 @@
 .icon[data-type="yandex"] {
   background-image: url("../../images/icons/yandex.svg");
 }
+.icon[data-type="shield"] {
+  background-image: url("../../images/icons/shield.svg");
+}
+.icon[data-type="eye"] {
+  background-image: url("../../images/icons/eye.svg");
+}
 
 .icon.is-color-white {
   filter: var(--icon-filter-white) !important;
 }
 
-.icon.is-color-hilight {
-  filter: var(--icon-filter-hilight) !important;
+.icon.is-color-highlight {
+  filter: var(--icon-filter-highlight) !important;
 }
 
 .icon.is-color-accent {

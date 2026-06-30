@@ -1,0 +1,34 @@
+.bg-highlight {
+  background: var(--color-bg-secondary-highlight);
+}
+
+.bg-highlight.is-has-gradient {
+  position: relative;
+  overflow: hidden;
+  background: none;
+}
+
+.bg-highlight.is-has-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: var(--color-bg-secondary-highlight);
+}
+
+.bg-highlight.is-has-gradient::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 15%;
+  right: 15%;
+  z-index: -1;
+  transform: translate(0, -75%);
+  filter: blur(128px);
+  aspect-ratio: 16/9;
+  background-image: url(../../images/logo-short.svg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.35;
+}
