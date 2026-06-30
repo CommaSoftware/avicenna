@@ -34,6 +34,22 @@
   .content-wrapper.is-grid-4.is-scrolled-adaptation {
     max-width: calc(var(--space-column-9) + var(--space-column-plus-gap));
   }
+
+  .content-wrapper.is-grid-4 {
+    max-width: calc(var(--space-column-9) + var(--padding-content-area) * 2);
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .content-wrapper.is-grid-4 {
+    max-width: calc(var(--space-column-6) + var(--padding-content-area) * 2);
+  }
+}
+
+@media screen and (max-width: 728px) {
+  .content-wrapper.is-grid-4 > * {
+    max-width: none;
+  }
 }
 
 @media screen and (max-width: 400px) {

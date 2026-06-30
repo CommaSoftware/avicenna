@@ -1,0 +1,73 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.page-numbers {
+  --button-color-preset-primary: var(--color-elem-primary);
+  --button-padding-side: 8px;
+  --button-height: 40px;
+  --button-color-text: var(--button-color-preset-primary);
+  --button-color-hovered: var(--color-elem-accent-primary-alt);
+  --button-bg: transparent;
+  --button-color-border: var(--button-color-preset-primary);
+  --button-font-size: var(--font-size-span-ml);
+  --button-border-radius: var(--border-radius-s);
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  box-sizing: border-box;
+  min-height: var(--button-height);
+  min-width: var(--button-height);
+  width: var(--button-height);
+  --button-padding-side: 0 !important;
+  padding: 0 calc(var(--button-padding-side) + 4px);
+  border: 2px solid var(--button-color-border);
+  border-radius: var(--button-border-radius);
+  color: var(--button-color-text);
+  background: var(--button-bg);
+  font-size: var(--button-font-size);
+  font-weight: 500;
+  white-space: nowrap;
+  letter-spacing: var(--font-letter-spacing);
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition-m);
+}
+
+.page-numbers.current {
+  --button-color-text: var(--color-elem-primary-alt);
+  --button-bg: var(--button-color-preset-primary);
+}
+.page-numbers.dots {
+  --button-color-text: var(--button-color-preset-primary);
+  --button-color-border: transparent;
+  --button-bg: transparent;
+  cursor: default;
+}
+
+.page-numbers .icon {
+  --icon-size: 20px;
+  transition: var(--transition-m);
+}
+
+.page-numbers:not(.dots):hover,
+.page-numbers:not(.dots):active {
+  --button-bg: var(--button-color-preset-primary);
+  --button-color-text: var(--color-elem-primary-alt);
+}
+.page-numbers.current:hover,
+.page-numbers.current:active {
+  --button-color-text: var(--color-elem-primary-alt);
+  --button-bg: var(--button-color-hovered);
+  --button-color-border: var(--button-color-hovered);
+}
+
+.page-numbers:hover .icon,
+.page-numbers:active .icon {
+  filter: var(--icon-filter-white);
+}

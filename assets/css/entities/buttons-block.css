@@ -1,0 +1,24 @@
+.buttons-block {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: var(--gap-blocks);
+}
+
+.content-wrapper.is-scrolled-adaptation + .content-wrapper .buttons-block {
+  padding-top: calc(var(--gap-blocks) - 12px);
+}
+
+/* ---------- Adaptation ---------- */
+@media screen and (max-width: 780px) {
+  .buttons-block {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .buttons-block .button {
+    width: 100%;
+  }
+}

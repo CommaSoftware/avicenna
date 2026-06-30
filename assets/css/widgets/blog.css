@@ -3,7 +3,7 @@
   grid-template-columns: var(--space-column-3) var(--space-column-3) 1fr;
   padding-top: var(--gap-blocks);
   padding-bottom: var(--gap-sections);
-  gap: var(--gap-blocks) var(--space-column-gap);
+  gap: 20px var(--space-column-gap);
 }
 
 .blog .pagination {
@@ -50,13 +50,13 @@
   margin-left: 12px;
 }
 
-.blog-author .cms-content p {
-  font-size: var(--font-size-span-xs);
+.blog-author .cms-content {
+  --cms-content-font-size: var(--font-size-span-xs);
 }
 
 .blog-author__actions {
   display: flex;
-  gap: 4px;
+  gap: 8px 4px;
   flex-wrap: wrap;
   padding-top: 16px;
 }

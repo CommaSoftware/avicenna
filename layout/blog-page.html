@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,13 +16,15 @@
     <link rel="stylesheet" href="/assets/css/shared/dropdown-menu.css" />
     <link rel="stylesheet" href="/assets/css/entities/content-wrapper.css" />
     <link rel="stylesheet" href="/assets/css/entities/cookie-overlay.css" />
-    <link rel="stylesheet" href="/assets/css/entities/buttons-block.css" />
-    <link rel="stylesheet" href="/assets/css/entities/heading-block.css" />
-    <link rel="stylesheet" href="/assets/css/entities/float-img.css" />
+    <link rel="stylesheet" href="/assets/css/entities/breadcrumbs.css" />
+    <link rel="stylesheet" href="/assets/css/entities/section-header.css" />
+    <link rel="stylesheet" href="/assets/css/entities/pagination.css" />
     <link rel="stylesheet" href="/assets/css/entities/blog-card.css" />
+    <link rel="stylesheet" href="/assets/css/entities/float-img.css" />
     <link rel="stylesheet" href="/assets/css/entities/popup.css" />
     <link rel="stylesheet" href="/assets/css/widgets/header.css" />
     <link rel="stylesheet" href="/assets/css/widgets/footer.css" />
+    <link rel="stylesheet" href="/assets/css/widgets/blog.css" />
     <title>Авиценна</title>
   </head>
   <body>
@@ -134,62 +136,83 @@
         </div>
       </div>
     </header>
-    <section id="blog_preview">
-      <div class="content-wrapper">
-        <div class="heading-block">
-          <h2 class="heading is-size-h2">Полезно знать</h2>
+    <section id="blog" class="blog">
+      <div class="section-header">
+        <div class="content-wrapper">
+          <div class="breadcrumbs">
+            <span class="breadcrumbs__item"
+              ><a href="index.html">Главная</a></span
+            >
+            <span class="breadcrumbs__item">Публикации</span>
+          </div>
+          <div class="section-header__headings">
+            <h1 class="heading">Публикации</h1>
+          </div>
+          <div class="section-header__actions">
+            <a href="404.html" class="button is-size-m is-hilight">Новости</a
+            ><a
+              href="category-projects.html"
+              class="button is-size-m is-hilight"
+              >Объявления</a
+            ><a href="404.html" class="button is-size-m is-hilight">Акции</a>
+            <a href="404.html" class="button is-size-m is-hilight"
+              >Полезно знать</a
+            >
+            <a href="404.html" class="button is-size-m is-hilight"
+              >Вопросы и ответы</a
+            >
+          </div>
         </div>
       </div>
-      <div class="content-wrapper is-grid-4">
-        <div class="blog-card is-pinned">
-          <div class="blog-card__header">
-            <time class="span is-size-xs is-secondary">1 июля</time>
-            <a href="404.html" class="blog-card__category button is-size-xs"
-              >Акции</a
+      <div class="content-wrapper blog__grid">
+        <div class="blog-sidebar" style="grid-row: 1 / calc(4 / 2 + 2)">
+          <!-- Свойство "grid-row" необходимо рассчитывать вручную, исходя из числа элементов по формуле: (length / 2) + 2, с округлением в большую сторону -->
+          <div class="blog-author">
+            <span class="blog-author__subheading span is-size-xs is-secondary"
+              >Автор</span
             >
+            <div class="blog-author__header">
+              <img
+                src="../assets/images/avatar.jpg"
+                class="blog-author-header__avatar"
+                alt=""
+              />
+              <div class="blog-author-header__name">
+                <h3 class="heading is-size-h5">Авиценна</h3>
+                <span class="span is-size-xs is-hilight"
+                  >Медицинский центр</span
+                >
+              </div>
+            </div>
+            <div class="cms-content">
+              <ol>
+                <li>УЗИ В ДЕНЬ ОБРАЩЕНИЯ!</li>
+                <li>мед. осмотр при трудоустройстве на работу;</li>
+                <li>справки водительские;</li>
+                <li>
+                  справки форма 086/у, в бассейн, 001-гсу ЭЭГ, ЭКГ, лабораторные
+                  анализы;
+                </li>
+                <li>ФГДС (гастродуоденоскопия);</li>
+                <li>приём врачей, справки, больничные листы;</li>
+                <li>
+                  подбор, изготовление очков и ночных линз, аппаратное лечение
+                  заболеваний глаз.
+                </li>
+              </ol>
+            </div>
+            <div class="blog-author__actions">
+              <a
+                href="#!"
+                class="button is-size-ml is-style-bordered is-wide-full"
+                >Задать вопрос</a
+              ><a
+                href="#!"
+                class="button is-size-ml is-style-accent is-wide-full"
+                >Записаться на приём</a
+              >
+            </div>
           </div>
-          <div class="blog-card__content">
-            <h4 class="heading is-size-h4">
-              Водительская справка за один день со скидкой 15%
-            </h4>
-            <p class="span">
-              Терапевт, офтальмолог, ЭЭГ и ЭКГ — всё в одном визите без потери
-              качества и без скрытых доначислений. В стоимость входят осмотры
-              всех необходимых специалистов...
-            </p>
-          </div>
-          <a href="single-page.html" class="blog-card__readmore">
-            Подробнее
-            <span
-              class="icon blog-card-footer__icon"
-              data-type="chervon-right"
-            ></span>
-          </a>
-        </div>
-        <div class="blog-card is-pinned">
-          <div class="blog-card__header">
-            <time class="span is-size-xs is-secondary">1 июля</time>
-            <a href="404.html" class="blog-card__category button is-size-xs"
-              >Акции</a
-            >
-          </div>
-          <div class="blog-card__content">
-            <h4 class="heading is-size-h4">Комплексное УЗИ со скидкой 20%</h4>
-            <p class="span">
-              Щитовидная железа, органы брюшной полости, почки и малый таз — за
-              одно посещение. Проводим исследование на аппарате экспертного
-              класса в день обращения без очереди. Условие акции: единовременная
-              запись на два и более УЗИ-исследования. Результат — на руки сразу
-              после процедуры. Предложение действует до конца текущего месяца.
-            </p>
-          </div>
-          <a href="single-page.html" class="blog-card__readmore">
-            Подробнее
-            <span
-              class="icon blog-card-footer__icon"
-              data-type="chervon-right"
-            ></span>
-          </a>
         </div>
         <div class="blog-card">
           <div class="blog-card__header">
@@ -303,72 +326,36 @@
             />
           </div>
         </div>
-        <div class="blog-card">
-          <div class="blog-card__header">
-            <time class="span is-size-xs is-secondary">1 июля</time>
-          </div>
-          <div class="blog-card__content">
-            <h4 class="heading is-size-h4">
-              Как сохранить зрение в учебном году
-            </h4>
-            <p class="span">
-              Как гаджеты, неправильное освещение и отсутствие регулярной
-              проверки ведут к ложной близорукости. Рассказываем, почему
-              достаточно одного визита к офтальмологу в сентябре...
-            </p>
-          </div>
-          <a href="single-page.html" class="blog-card__readmore">
-            Подробнее
-            <span
-              class="icon blog-card-footer__icon"
-              data-type="chervon-right"
-            ></span>
-          </a>
-          <div class="blog-card__cover">
-            <img
-              src="../assets/images/examples/example-blog-5.jpg"
-              alt=""
-              class="blog-card-cover__image"
-            />
-          </div>
-        </div>
-        <div class="blog-card">
-          <div class="blog-card__header">
-            <time class="span is-size-xs is-secondary">1 июля</time>
-          </div>
-          <div class="blog-card__content">
-            <h4 class="heading is-size-h4">
-              Сухие глаза — расплата за длительную работу перед монитором
-            </h4>
-            <p class="span">
-              Разбираем, как отличить функциональную астенопию от начинающейся
-              катаракты, какие увлажняющие капли работают...
-            </p>
-          </div>
-          <a href="single-page.html" class="blog-card__readmore">
-            Подробнее
-            <span
-              class="icon blog-card-footer__icon"
-              data-type="chervon-right"
-            ></span>
-          </a>
-          <div class="blog-card__cover">
-            <img
-              src="../assets/images/examples/example-blog-6.jpg"
-              alt=""
-              class="blog-card-cover__image"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="content-wrapper">
-        <div class="buttons-block">
-          <a href="blog-page.html" class="button is-style-secondary is-wide"
-            >Смотреть всё</a
-          >
+        <div class="pagination">
+          <a
+            href="#!"
+            class="button is-size-l is-style-primary is-aspect-ratio-1b1 is-no-hover"
+            >1</a
+          ><a
+            href="#!"
+            class="button is-size-l is-style-bordered is-aspect-ratio-1b1"
+            >2</a
+          ><a
+            href="#!"
+            class="button is-size-l is-style-transparent is-aspect-ratio-1b1 is-no-hover"
+            >...</a
+          ><a
+            href="#!"
+            class="button is-size-l is-style-bordered is-aspect-ratio-1b1"
+            >20</a
+          ><a
+            href="#!"
+            class="button is-size-l is-style-bordered is-aspect-ratio-1b1"
+            >21</a
+          ><a
+            href="#!"
+            class="button is-size-l is-style-bordered is-aspect-ratio-1b1"
+            ><span class="icon" data-type="chervon-right"></span
+          ></a>
         </div>
       </div>
     </section>
+
     <div id="cookie_overlay" class="cookie-overlay">
       <div class="content-wrapper">
         <div class="cookie-overlay__block">

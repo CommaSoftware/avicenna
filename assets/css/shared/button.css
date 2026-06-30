@@ -65,6 +65,7 @@
 .button.is-hilight {
   --button-color-preset-primary: var(--color-elem-secondary-highlight);
   --button-color-hovered: var(--color-elem-primary-highlight);
+  --button-bg: var(--color-bg-secondary-highlight);
 }
 
 /* Sizes for buttons */
@@ -160,17 +161,26 @@
 /* Effects for buttons */
 
 .button:not(.is-no-hover):hover,
-.button:not(.is-no-hover):active,
-.button:not(.is-no-hover).is-style-secondary:hover,
-.button:not(.is-no-hover).is-style-secondary:active {
+.button:not(.is-no-hover):active {
   --button-bg: var(--color-bg-tertiary-highlight);
   --button-color-text: var(--button-color-hovered);
+}
+
+.button.is-hilight:not(.is-no-hover):hover,
+.button.is-hilight:not(.is-no-hover):active {
+  --button-bg: var(--color-bg-secondary-highlight);
 }
 
 .button:not(.is-no-hover).is-style-primary:hover,
 .button:not(.is-no-hover).is-style-primary:active {
   --button-color-text: var(--color-elem-primary-alt);
   --button-bg: var(--button-color-hovered);
+}
+
+.button:not(.is-no-hover).is-style-secondary:hover,
+.button:not(.is-no-hover).is-style-secondary:active {
+  --button-bg: var(--color-bg-tertiary-highlight);
+  --button-color-text: var(--color-elem-primary);
 }
 
 .button:not(.is-no-hover).is-style-accent:hover,

@@ -1,0 +1,25 @@
+.heading-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding-top: var(--gap-sections);
+}
+
+.heading-block .heading,
+.heading-block .span {
+  text-align: center;
+}
+
+/* ---------- Adaptation ---------- */
+
+@media screen and (max-width: 780px) {
+  .heading-block {
+    align-items: flex-start;
+  }
+
+  .heading-block .heading,
+  .heading-block .span {
+    text-align: left;
+  }
+}
