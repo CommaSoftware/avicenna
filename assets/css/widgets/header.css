@@ -258,6 +258,6 @@
 
 @media screen and (max-width: 380px) {
   .header__heading .header-logo img {
-    max-height: 28px;
+    max-height: 20px;
   }
 }

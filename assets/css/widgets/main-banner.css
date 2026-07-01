@@ -14,3 +14,9 @@
   width: 302px;
   max-height: none;
 }
+
+@media screen and (max-width: 380px) {
+  .main-banner__logo .logo-full img {
+    width: 100%;
+  }
+}

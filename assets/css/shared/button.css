@@ -62,6 +62,13 @@
   --button-color-text: var(--button-color-preset-primary);
 }
 
+.button.is-style-bordered-alt {
+  --button-color-preset-primary: var(--color-bg-primary);
+  --button-bg: transparent;
+  --button-color-border: var(--button-color-preset-primary);
+  --button-color-text: var(--button-color-preset-primary);
+}
+
 .button.is-highlight {
   --button-color-preset-primary: var(--color-elem-secondary-highlight);
   --button-color-hovered: var(--color-elem-primary-highlight);
@@ -218,6 +225,12 @@
   --button-color-text: var(--color-elem-primary-alt);
 }
 
+.button:not(.is-no-hover).is-style-bordered-alt:hover,
+.button:not(.is-no-hover).is-style-bordered-alt:active {
+  --button-bg: var(--button-color-preset-primary);
+  --button-color-text: var(--color-elem-primary);
+}
+
 .button:not(.is-no-hover):hover .icon,
 .button:not(.is-no-hover):active .icon,
 .button:not(.is-no-hover).is-style-secondary:hover .icon,
@@ -241,6 +254,11 @@
 .button:not(.is-no-hover).is-style-bordered:hover .icon,
 .button:not(.is-no-hover).is-style-bordered:active .icon {
   filter: var(--icon-filter-white);
+}
+
+.button:not(.is-no-hover).is-style-bordered-alt:hover .icon,
+.button:not(.is-no-hover).is-style-bordered-alt:active .icon {
+  filter: var(--icon-filter-clear);
 }
 
 .button:not(.is-no-hover).is-style-accent:hover .icon,

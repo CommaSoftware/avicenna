@@ -1,0 +1,19 @@
+.filials {
+  padding-bottom: var(--gap-blocks);
+}
+
+.filials .filial-card:hover,
+.filials .filial-card:active {
+  box-shadow: var(--shadow-card);
+}
+
+.filials .filial-card:hover .filial-card-body__cover,
+.filials .filial-card:active .filial-card-body__cover {
+  transform: scale(105%);
+}
+
+@media screen and (min-width: 480px) {
+  .filials .filial-card__menu ul li {
+    width: calc(50% - 4px);
+  }
+}

@@ -200,6 +200,13 @@
 .icon[data-type="eye"] {
   background-image: url("../../images/icons/eye.svg");
 }
+.icon[data-type="2gis"] {
+  background-image: url("../../images/icons/2gis.svg");
+}
+
+.icon.is-color-clear {
+  filter: var(--icon-filter-clear) !important;
+}
 
 .icon.is-color-white {
   filter: var(--icon-filter-white) !important;
