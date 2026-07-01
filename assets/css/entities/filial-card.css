@@ -68,6 +68,7 @@
 .filial-card__menu ul li a {
   display: flex;
   align-items: center;
+  gap: 4px;
   color: var(--color-elem-primary);
   border-radius: 4px;
   text-decoration: none;

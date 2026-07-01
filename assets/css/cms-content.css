@@ -184,3 +184,8 @@
   --button-color-border: var(--button-color-preset-primary);
   --button-color-text: var(--button-color-preset-primary);
 }
+
+.cms-content iframe {
+  border-radius: var(--border-radius-s);
+  overflow: hidden;
+}
