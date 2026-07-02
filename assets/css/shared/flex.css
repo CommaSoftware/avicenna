@@ -4,6 +4,10 @@
   align-items: var(--align-items);
 }
 
+.flex.is-wide-full {
+  width: 100%;
+}
+
 .flex.is-align-items-end {
   --align-items: flex-end;
 }

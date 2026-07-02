@@ -13,8 +13,13 @@
   box-shadow: var(--shadow-card-s);
 }
 
+.specialist-card__headings {
+  margin-bottom: 16px;
+}
+
 .specialist-card__cover {
   width: 120px;
+  min-width: 120px;
   height: 120px;
 }
 
@@ -27,6 +32,7 @@
 }
 
 .specialist-card__filial {
+  justify-content: flex-start;
   padding: 0;
   font-size: 12px;
 }
@@ -35,7 +41,7 @@
   position: static;
 }
 
-.specialist-card__readmore::after {
+.specialist-card__readmore::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -46,4 +52,21 @@
   position: relative;
   z-index: 2;
   transform: translateZ(1px);
+}
+
+.single-header .specialist-card__cover {
+  height: 100%;
+  min-height: 200px;
+  min-width: 200px;
+}
+
+.single-header .specialist-card {
+  display: flex;
+  gap: 12px;
+}
+
+@media screen and (max-width: 680px) {
+  .single-header .specialist-card {
+    flex-wrap: wrap;
+  }
 }
