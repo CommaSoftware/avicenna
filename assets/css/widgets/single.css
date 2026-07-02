@@ -11,6 +11,11 @@
   border-bottom: 1px solid var(--color-border-secondary);
 }
 
+.single-header.is-style-thirty {
+  background-color: var(--color-bg-primary);
+  padding-bottom: 0;
+}
+
 .single-header .breadcrumbs {
   padding: 0;
 }
