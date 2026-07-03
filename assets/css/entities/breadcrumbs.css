@@ -5,6 +5,15 @@
   padding: var(--gap-blocks) 0;
 }
 
+.breadcrumbs.is-centered {
+  justify-content: center;
+}
+
+.breadcrumbs.is-style-secondary .breadcrumbs__item,
+.breadcrumbs.is-style-secondary .breadcrumbs__item a {
+  color: var(--color-elem-secondary);
+}
+
 .breadcrumbs__item {
   display: flex;
   gap: 12px;
@@ -31,5 +40,9 @@
 @media screen and (max-width: 480px) {
   .breadcrumbs__item:last-child:not(:has(a)) {
     display: none;
+  }
+
+  .breadcrumbs.is-centered {
+    justify-content: flex-start;
   }
 }

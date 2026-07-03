@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,18 +17,17 @@
     <link rel="stylesheet" href="../assets/css/shared/dropdown-menu.css" />
     <link rel="stylesheet" href="../assets/css/entities/content-wrapper.css" />
     <link rel="stylesheet" href="../assets/css/entities/cookie-overlay.css" />
-    <link rel="stylesheet" href="../assets/css/entities/breadcrumbs.css" />
-    <link rel="stylesheet" href="../assets/css/entities/section-header.css" />
-    <link rel="stylesheet" href="../assets/css/entities/pagination.css" />
-    <link rel="stylesheet" href="../assets/css/entities/blog-card.css" />
     <link rel="stylesheet" href="../assets/css/entities/float-img.css" />
+    <link rel="stylesheet" href="../assets/css/entities/breadcrumbs.css" />
+    <link rel="stylesheet" href="../assets/css/entities/heading-block.css" />
     <link rel="stylesheet" href="../assets/css/entities/popup.css" />
     <link rel="stylesheet" href="../assets/css/widgets/header.css" />
     <link rel="stylesheet" href="../assets/css/widgets/footer.css" />
-    <link rel="stylesheet" href="../assets/css/widgets/blog.css" />
-    <meta property="og:title" content="Блог – Авиценна" />
+    <link rel="stylesheet" href="../assets/css/widgets/not-found.css" />
+    <link rel="stylesheet" href="../assets/css/widgets/faq.css" />
+    <meta property="og:title" content="Ответы на вопросы – Авиценна" />
     <meta property="og:image" content="../assets/images/cover.jpg" />
-    <title>Блог – Авиценна</title>
+    <title>Ответы на вопросы – Авиценна</title>
   </head>
   <body>
     <header class="header">
@@ -142,226 +141,160 @@
         </div>
       </div>
     </header>
-    <section id="blog" class="blog">
-      <div class="section-header">
-        <div class="content-wrapper">
-          <div class="breadcrumbs">
+    <section id="faq">
+      <div class="content-wrapper">
+        <div class="heading-block">
+          <div class="breadcrumbs is-style-secondary is-centered">
             <span class="breadcrumbs__item"
               ><a href="index.html">Главная</a></span
             >
-            <span class="breadcrumbs__item">Публикации</span>
-          </div>
-          <div class="section-header__headings">
-            <h1 class="heading">Публикации</h1>
-          </div>
-          <div class="section-header__actions">
-            <a href="404.html" class="button is-size-m is-highlight">Новости</a
-            ><a
-              href="category-projects.html"
-              class="button is-size-m is-highlight"
-              >Объявления</a
-            ><a href="404.html" class="button is-size-m is-highlight">Акции</a>
-            <a href="404.html" class="button is-size-m is-highlight"
-              >Полезно знать</a
-            >
-            <a href="faq-page.html" class="button is-size-m is-highlight"
-              >Вопросы и ответы</a
+            <span class="breadcrumbs__item"
+              ><a href="blog-page.html">Публикации</a></span
             >
           </div>
+          <h2 class="heading is-size-h2">Ответы на вопросы</h2>
         </div>
       </div>
-      <div class="content-wrapper blog__grid">
-        <div class="blog-sidebar" style="grid-row: 1 / calc(4 / 2 + 2)">
-          <!-- Свойство "grid-row" необходимо рассчитывать вручную, исходя из числа элементов по формуле: (length / 2) + 2, с округлением в большую сторону -->
-          <div class="blog-author">
-            <span class="blog-author__subheading span is-size-xs is-secondary"
-              >Автор</span
-            >
-            <div class="blog-author__header">
-              <img
-                src="../assets/images/avatar.jpg"
-                class="blog-author-header__avatar"
-                alt=""
-              />
-              <div class="blog-author-header__name">
-                <h3 class="heading is-size-h5">Авиценна</h3>
-                <span class="span is-size-xs is-highlight"
-                  >Медицинский центр</span
-                >
-              </div>
+      <div class="content-wrapper">
+        <div class="faq__block">
+          <details class="faq__item">
+            <summary class="faq__item__question">
+              Можно ли сделать УЗИ в день обращения без предварительной записи?
+            </summary>
+            <div class="faq__item__answer cms-content">
+              <p>
+                Да. В медицинском центре «АВИЦЕННА» действует правило: УЗИ
+                проводится в день обращения при наличии свободного времени в
+                графике работы специалиста. Вы можете приехать в клинику или
+                позвонить администратору — исследование организуют максимально
+                оперативно. Это касается как плановых осмотров, так и экстренных
+                диагностических ситуаций.
+              </p>
             </div>
-            <div class="cms-content">
-              <ol>
-                <li>УЗИ В ДЕНЬ ОБРАЩЕНИЯ!</li>
-                <li>мед. осмотр при трудоустройстве на работу;</li>
-                <li>справки водительские;</li>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__item__question">
+              Как оформить водительскую справку?
+            </summary>
+            <div class="faq__item__answer cms-content">
+              <p>
+                Водительская справка оформляется на основании заключений
+                терапевта, офтальмолога, психиатра-нарколог (в рамках
+                лицензированной комиссии).
+              </p>
+              <p>
+                В клинике «АВИЦЕННА» вы можете пройти всех необходимых врачей в
+                один день, включая ЭЭГ и ЭКГ по показаниям. Готовый документ
+                соответствует требованиям ГИБДД и действует для замены или
+                получения водительского удостоверения.
+              </p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__item__question">
+              Что входит в справку формы 086/у и для чего она нужна?
+            </summary>
+            <div class="faq__item__answer cms-content">
+              <p>
+                Справка формы 086/у — это стандартный медицинский документ,
+                обязательный для:
+              </p>
+              <ul>
                 <li>
-                  справки форма 086/у, в бассейн, 001-гсу ЭЭГ, ЭКГ, лабораторные
-                  анализы;
+                  поступления в средние специальные и высшие учебные заведения;
                 </li>
-                <li>ФГДС (гастродуоденоскопия);</li>
-                <li>приём врачей, справки, больничные листы;</li>
                 <li>
-                  подбор, изготовление очков и ночных линз, аппаратное лечение
-                  заболеваний глаз.
+                  оформления в общеобразовательные учреждения (школы, лицеи,
+                  гимназии).
                 </li>
-              </ol>
+              </ul>
+              <p>
+                В справку входят заключения: терапевта, хирурга, невролога,
+                офтальмолога, отоларинголога, а также результаты флюорографии,
+                ЭКГ и лабораторных анализов (клинический анализ крови и мочи,
+                кровь на сахар). В «АВИЦЕННЕ» справка оформляется в течение 1–2
+                дней.
+              </p>
             </div>
-            <div class="blog-author__actions">
-              <a
-                href="#!"
-                class="button is-size-ml is-style-bordered is-wide-full"
-                >Задать вопрос</a
-              ><a
-                href="#!"
-                class="button is-size-ml is-style-accent is-wide-full"
-                >Записаться на приём</a
-              >
+          </details>
+          <details class="faq__item">
+            <summary class="faq__item__question">
+              Можно ли пройти ФГДС без направления и без очереди?
+            </summary>
+            <div class="faq__item__answer cms-content">
+              <p>
+                Да. Эндоскопическое исследование (гастродуоденоскопия)
+                проводится в клинике по предварительной записи в удобное для
+                пациента время. Направление от врача не требуется. Процедура
+                выполняется на современном оборудовании с использованием тонких
+                гастроскопов, что снижает дискомфорт. По желанию пациента
+                возможно проведение ФГДС в медикаментозном сне.
+              </p>
             </div>
-          </div>
-        </div>
-        <div class="blog-card">
-          <div class="blog-card__header">
-            <time class="span is-size-xs is-secondary">1 июля</time>
-          </div>
-          <div class="blog-card__content">
-            <h4 class="heading is-size-h4">
-              Как укрепить иммунитет ребенка перед началом учебного года?
-            </h4>
-            <p class="span">
-              Витамины, режим дня и работа педиатра: что действительно помогает
-              реже болеть в школе и детском саду. Чек-лист для родителей.
-            </p>
-          </div>
-          <a href="single-page.html" class="blog-card__readmore">
-            Подробнее
-            <span
-              class="icon blog-card-footer__icon"
-              data-type="chervon-right"
-            ></span>
-          </a>
-          <div class="blog-card__cover">
-            <img
-              src="../assets/images/examples/example-blog-1.jpg"
-              alt=""
-              class="blog-card-cover__image"
-            />
-          </div>
-        </div>
-        <div class="blog-card">
-          <div class="blog-card__header">
-            <time class="span is-size-xs is-secondary">1 июля</time>
-          </div>
-          <div class="blog-card__content">
-            <h4 class="heading is-size-h4">
-              5 скрытых признаков дефицита железа, которые вы игнорируете
-            </h4>
-            <p class="span">
-              Холодные руки, ломкие ногти и тяга к мелу. Рассказываем, какие
-              анализы сдать и как быстро восстановить уровень ферритина.
-            </p>
-          </div>
-          <a href="single-page.html" class="blog-card__readmore">
-            Подробнее
-            <span
-              class="icon blog-card-footer__icon"
-              data-type="chervon-right"
-            ></span>
-          </a>
-          <div class="blog-card__cover">
-            <img
-              src="../assets/images/examples/example-blog-2.jpg"
-              alt=""
-              class="blog-card-cover__image"
-            />
-          </div>
-        </div>
-        <div class="blog-card">
-          <div class="blog-card__header">
-            <time class="span is-size-xs is-secondary">1 июля</time>
-          </div>
-          <div class="blog-card__content">
-            <h4 class="heading is-size-h4">
-              Какие скрытые болезни находит обычный анализ крови?
-            </h4>
-            <p class="span">
-              Расшифровка показателей, на которые обычно не смотрят. График
-              обязательных визитов к врачу для мужчин и женщин после 35 лет.
-            </p>
-          </div>
-          <a href="single-page.html" class="blog-card__readmore">
-            Подробнее
-            <span
-              class="icon blog-card-footer__icon"
-              data-type="chervon-right"
-            ></span>
-          </a>
-          <div class="blog-card__cover">
-            <img
-              src="../assets/images/examples/example-blog-3.jpg"
-              alt=""
-              class="blog-card-cover__image"
-            />
-          </div>
-        </div>
-        <div class="blog-card">
-          <div class="blog-card__header">
-            <time class="span is-size-xs is-secondary">1 июля</time>
-          </div>
-          <div class="blog-card__content">
-            <h4 class="heading is-size-h4">
-              Почему «все болезни от нервов»? Взгляд терапевта
-            </h4>
-            <p class="span">
-              Хронический стресс, гастрит и высокое давление: как связаны ваши
-              эмоции и физическое здоровье. Техники самопомощи перед сном.
-            </p>
-          </div>
-          <a href="single-page.html" class="blog-card__readmore">
-            Подробнее
-            <span
-              class="icon blog-card-footer__icon"
-              data-type="chervon-right"
-            ></span>
-          </a>
-          <div class="blog-card__cover">
-            <img
-              src="../assets/images/examples/example-blog-4.jpg"
-              alt=""
-              class="blog-card-cover__image"
-            />
-          </div>
-        </div>
-        <div class="pagination">
-          <a
-            href="#!"
-            class="button is-size-l is-style-primary is-aspect-ratio-1b1 is-no-hover"
-            >1</a
-          ><a
-            href="#!"
-            class="button is-size-l is-style-bordered is-aspect-ratio-1b1"
-            >2</a
-          ><a
-            href="#!"
-            class="button is-size-l is-style-transparent is-aspect-ratio-1b1 is-no-hover"
-            >...</a
-          ><a
-            href="#!"
-            class="button is-size-l is-style-bordered is-aspect-ratio-1b1"
-            >20</a
-          ><a
-            href="#!"
-            class="button is-size-l is-style-bordered is-aspect-ratio-1b1"
-            >21</a
-          ><a
-            href="#!"
-            class="button is-size-l is-style-bordered is-aspect-ratio-1b1"
-            ><span class="icon" data-type="chervon-right"></span
-          ></a>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__item__question">
+              Выдаёте ли вы больничные листы?
+            </summary>
+            <div class="faq__item__answer cms-content">
+              <p>
+                Да. Медицинский центр «АВИЦЕННА» имеет лицензию на проведение
+                экспертизы временной нетрудоспособности. Листок
+                нетрудоспособности (больничный лист) оформляется врачом после
+                очного приёма при наличии клинических показаний. Документ
+                принимается по месту работы, включая электронный формат (ЭЛН).
+              </p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__item__question">
+              Какие исследования входят в лабораторные анализы?
+            </summary>
+            <div class="faq__item__answer cms-content">
+              <p>В клинике доступен полный спектр лабораторной диагностики:</p>
+              <ul>
+                <li>клинический и биохимический анализы крови;</li>
+                <li>общий анализ мочи;</li>
+                <li>
+                  исследование на гормоны, маркеры воспаления, онкомаркеры;
+                </li>
+                <li>анализ на инфекции (включая ПЦР);</li>
+                <li>коагулограмма, липидный профиль.</li>
+              </ul>
+              <p>
+                Биоматериал принимается ежедневно. Большинство анализов
+                выполняются в течение 24 часов.
+              </p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__item__question">
+              Какие документы нужны для прохождения медосмотра при
+              трудоустройстве?
+            </summary>
+            <div class="faq__item__answer cms-content">
+              <p>
+                Для прохождения обязательного предварительного (при поступлении
+                на работу) и периодического медицинского осмотра при себе
+                необходимо иметь:
+              </p>
+              <ul>
+                <li>паспорт гражданина РФ;</li>
+                <li>направление от работодателя (если требуется);</li>
+                <li>
+                  паспорт здоровья (при наличии результатов предыдущих
+                  осмотров).
+                </li>
+              </ul>
+              <p>
+                По итогу осмотра выдаётся заключение установленного образца с
+                допуском к профессиональной деятельности.
+              </p>
+            </div>
+          </details>
         </div>
       </div>
     </section>
-
     <div id="cookie_overlay" class="cookie-overlay">
       <div class="content-wrapper">
         <div class="cookie-overlay__block">
