@@ -12,6 +12,16 @@ $theme_contacts_tg_link = get_theme_mod('contacts__tg_link', Theme_Defaults::CON
 $theme_contacts_vk_link = get_theme_mod('contacts__vk_link', Theme_Defaults::CONTACTS_VK_LINK);
 $theme_contacts_max_link = get_theme_mod('contacts__max_link', Theme_Defaults::CONTACTS_MAX_LINK);
 
+$args = array(
+  'post_type'      => 'filial',
+  'post_status'    => 'publish',
+  'posts_per_page' => -1,
+  'orderby'        => 'date',
+  'order'          => 'ASC'
+);
+
+$filials_query = new WP_Query($args);
+
 ?>
 
 <?php get_template_part("templates/entities/cookies") ?>
@@ -31,54 +41,35 @@ $theme_contacts_max_link = get_theme_mod('contacts__max_link', Theme_Defaults::C
       </div>
       <div class="footer-content__info">
         <div class="footer-content-info__contacts">
-          <div class="footer-contacts-line">
-            <div
-              class="footer-contacts-line__icon button is-size-s is-style-transparent is-highlight is-aspect-ratio-1b1"
-            >
-              <span class="icon" data-type="phone"></span>
-            </div>
-            <div class="footer-phone-group">
-              <div class="footer-phone-group__line">
-                <span
-                  class="button is-size-s is-style-transparent is-highlight is-no-hover"
-                  target="_blank"
-                  >Филиал на Юбилейном
-                </span>
-                <a
-                  href="tel:+7 (3012) 37-60-60"
-                  class="button is-size-s is-style-transparent"
-                  target="_blank"
-                  >+7 (3012) 37-60-60
-                </a>
+          <?php if ($filials_query->have_posts()) : ?>
+            <div class="footer-contacts-line">
+              <div
+                class="footer-contacts-line__icon button is-size-s is-style-transparent is-highlight is-aspect-ratio-1b1"
+              >
+                <span class="icon" data-type="phone"></span>
               </div>
-              <div class="footer-phone-group__line">
-                <span
-                  class="button is-size-s is-style-transparent is-highlight is-no-hover"
-                  target="_blank"
-                  >Центр охраны зрения
-                </span>
-                <a
-                  href="tel:+7 (3012) 60-13-13"
-                  class="button is-size-s is-style-transparent"
-                  target="_blank"
-                  >+7 (3012) 60-13-13
-                </a>
-              </div>
-              <div class="footer-phone-group__line">
-                <span
-                  class="button is-size-s is-style-transparent is-highlight is-no-hover"
-                  target="_blank"
-                  >Филиал в Иволгинске
-                </span>
-                <a
-                  href="tel:+7 (3012) 31-16-11"
-                  class="button is-size-s is-style-transparent"
-                  target="_blank"
-                  >+7 (3012) 31-16-11
-                </a>
+              <div class="footer-phone-group">
+                <?php while ($filials_query->have_posts()) : $filials_query->the_post(); ?>
+                  <?php $filial_phone = esc_html(get_filial_phone()); ?>
+                  <?php if (!empty($filial_phone)) : ?>
+                    <div class="footer-phone-group__line">
+                      <span
+                        class="button is-size-s is-style-transparent is-highlight is-no-hover"
+                        ><?php the_title(); ?>
+                      </span>
+                      <a
+                        href="<?php echo 'tel:'.$filial_phone; ?>"
+                        class="button is-size-s is-style-transparent"
+                        target="_blank"
+                        ><?php echo $filial_phone ?>
+                      </a>
+                    </div>
+                  <?php endif; ?>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); wp_reset_query(); ?>
               </div>
             </div>
-          </div>
+          <?php endif; ?>
           <?php if($theme_contacts_email != ''): ?>
             <div class="footer-contacts-line">
               <div

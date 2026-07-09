@@ -31,6 +31,16 @@
 	$theme_header_button1_link = get_theme_mod('header__button1_link', Theme_Defaults::HEADER_BUTTON1_LINK);
 	$theme_header_button1_name = get_theme_mod('header__button1_name', Theme_Defaults::HEADER_BUTTON1_NAME);
 	$theme_header_button1_icon = get_theme_mod('header__button1_icon', Theme_Defaults::HEADER_BUTTON1_ICON);
+
+	$args = array(
+		'post_type'      => 'filial',
+		'post_status'    => 'publish',
+		'posts_per_page' => -1,
+		'orderby'        => 'date',
+		'order'          => 'ASC'
+	);
+
+	$filials_query = new WP_Query($args);
 ?>
 
 <header class="header">
@@ -48,20 +58,24 @@
 					<?php endif; ?>
 				</a>
 			</div>
-			<div class="header-filial">
-				<div class="dropdown-menu is-style-bordered">
-					<ul>
-						<li>
-							<a>Филиалы</a>
-							<ul>
-								<li><a href="page-filial.html">Филиал на Юбилейном</a></li>
-								<li><a href="page-filial.html">Центр охраны зрения</a></li>
-								<li><a href="page-filial.html">Филиал в Иволгинске</a></li>
-							</ul>
-						</li>
-					</ul>
+			<?php if ($filials_query->have_posts()) : ?>
+				<div class="header-filial">
+					<div class="dropdown-menu is-style-bordered">
+						
+						<ul>
+							<li>
+								<a>Филиалы</a>
+								<ul>
+									<?php while ($filials_query->have_posts()) : $filials_query->the_post(); ?>
+										<li><a href="<? the_permalink(); ?>"><?php the_title(); ?></a></li>
+									<?php endwhile; ?>
+									<?php wp_reset_postdata(); wp_reset_query(); ?>
+								</ul>
+							</li>
+						</ul>
+					</div>
 				</div>
-			</div>
+			<?php endif; ?>
 		</div>
 		<div class="header__contacts">
 			<?php if ($theme_contacts_tg_link != ""): ?>
@@ -91,32 +105,24 @@
 					><span class="icon" data-type="max"></span
 				></a>
 			<?php endif; ?>
-			<div class="header-contacts__phones">
-				<div class="header-contacts-phones__item">
-					<span class="span is-size-xxs">Филиал на Юбилейном</span>
-					<a
-						href="tel:+7 (3012) 37-60-60"
-						class="button is-style-transparent is-size-s"
-						>+7 (3012) 37-60-60</a
-					>
+			<?php if ($filials_query->have_posts()) : ?>
+				<div class="header-contacts__phones">
+					<?php while ($filials_query->have_posts()) : $filials_query->the_post(); ?>
+						<?php $filial_phone = esc_html(get_filial_phone()); ?>
+						<?php if (!empty($filial_phone)) : ?>
+							<div class="header-contacts-phones__item">
+								<span class="span is-size-xxs"><?php the_title(); ?></span>
+								<a
+									href="<?php echo 'tel:'.$filial_phone; ?>"
+									class="button is-style-transparent is-size-s"
+									><?php echo $filial_phone ?></a
+								>
+							</div>
+						<?php endif; ?>
+					<?php endwhile; ?>
+					<?php wp_reset_postdata(); wp_reset_query(); ?>
 				</div>
-				<div class="header-contacts-phones__item">
-					<span class="span is-size-xxs">Центр охраны зрения</span>
-					<a
-						href="tel:+7 (3012) 60-13-13"
-						class="button is-style-transparent is-size-s"
-						>+7 (3012) 60-13-13</a
-					>
-				</div>
-				<div class="header-contacts-phones__item">
-					<span class="span is-size-xxs">Филиал в Иволгинске</span>
-					<a
-						href="tel:+7 (3012) 31-16-11"
-						class="button is-style-transparent is-size-s"
-						>+7 (3012) 31-16-11</a
-					>
-				</div>
-			</div>
+			<?php endif; ?>
 		</div>
 		<nav class="header__nav dropdown-menu is-only-desktop">
 			<?php wp_nav_menu( [
