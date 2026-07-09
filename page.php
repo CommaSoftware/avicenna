@@ -9,12 +9,9 @@
 
 <?php if( have_posts() ) : the_post(); ?>
 	<article id="content">
-		<?php get_template_part('templates/entities/single-header', null, ['show_blog_link' => false]) ?>
-		<?php get_template_part('templates/entities/single-content') ?>
+		<?php get_template_part('templates/entities/single-header', null, ['show_blog_link' => false, 'show_time' => false, 'style' => 'secondary']) ?>
+		<?php get_template_part('templates/entities/single-content', null, ['show_sidebar' => false]) ?>
 	</article>
 <?php wp_reset_postdata(); endif; ?>
-
-<?php get_template_part("templates/widgets/blog-view"); ?>
-<?php get_template_part("templates/widgets/target-banner"); ?>
 
 <?php get_footer(); ?>

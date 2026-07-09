@@ -7,14 +7,18 @@
  */
 
 $show_blog_link = isset($args['show_blog_link']) ? to_bool($args['show_blog_link']) : true;
+$show_time = isset($args['show_time']) ? to_bool($args['show_time']) : true;
 $theme_blog_heading = get_theme_mod('blog__heading', Theme_Defaults::BLOG_HEADING);
 $theme_blog_link = get_theme_mod('blog__link', Theme_Defaults::BLOG_LINK);
+$single_header_style = isset($args['style']) ? $args['style'] : '';
+if ($single_header_style === 'secondary') { $single_header_style = 'is-style-secondary'; }
+if ($single_header_style === 'thirty') { $single_header_style = 'is-style-thirty'; }
 
 ?>
 
 <?php $breadcrumb_blog = $show_blog_link ? ['name' => $theme_blog_heading, 'href' => $theme_blog_link] : null; ?>
 
-<div class="single-header">
+<div class="single-header <?php echo $single_header_style; ?>">
 	<div class="content-wrapper">
 		<?php get_template_part('templates/entities/breadcrumbs', null, [
 			$breadcrumb_blog
@@ -30,7 +34,9 @@ $theme_blog_link = get_theme_mod('blog__link', Theme_Defaults::BLOG_LINK);
 			<?php if (!empty($title)) : ?>
 				<h1><?php echo $title; ?></h1>
 			<?php endif; ?>
-			<time class="span is-size-xs is-secondary"><?php echo get_custom_post_date(); ?></time>
+			<?php if ($show_time) : ?>
+				<time class="span is-size-xs is-secondary"><?php echo get_custom_post_date(); ?></time>
+			<?php endif; ?>
 			<?php if( has_excerpt() ): ?>
 				<?php the_excerpt(); ?>
 			<?php endif; ?>
