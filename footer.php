@@ -1,6 +1,6 @@
 <?php 
 
-$theme_logo = get_theme_mod('header__logo', Theme_Defaults::HEADER_LOGO);
+$theme_footer_logo = get_theme_mod('footer__logo', Theme_Defaults::FOOTER_LOGO);
 $theme_copyright_name = get_theme_mod('footer__copyright_name', Theme_Defaults::FOOTER_COPYRIGHT_NAME);
 $theme_privacy_link = get_theme_mod('footer__privacy_link', Theme_Defaults::FOOTER_PRIVACY_LINK);
 $theme_offer_name = get_theme_mod('footer__offer_name', Theme_Defaults::FOOTER_OFFER_NAME);
@@ -32,8 +32,8 @@ $filials_query = new WP_Query($args);
     <div class="content-wrapper">
       <div class="footer-content__logo">
         <a href="<? echo get_home_url(); ?>" class="logo-full">
-          <?php if ($theme_logo != ""): ?>
-            <img src="<?php echo $theme_logo; ?>" alt="Логотип <?php bloginfo('name'); ?>">
+          <?php if ($theme_footer_logo != ""): ?>
+            <img src="<?php echo $theme_footer_logo; ?>" alt="Логотип <?php bloginfo('name'); ?>">
           <?php else: ?>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="Авиценна" />
           <?php endif; ?>

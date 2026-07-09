@@ -25,6 +25,10 @@ class Theme_Defaults {
 		const FOOTER_OFFER_LINK = '/offer-info';
 		const FOOTER_LICENSES_LINK = '/licenses';
 
+
+		const MAIN_BANNER_LOGO = false;
+		const MAIN_BANNER_LICENSE_LINK = '#!';
+
 		const BLOG_HEADING = 'Публикации';
 		const BLOG_LINK = '/blog';
 		const BLOG_ANSWER_TO_EMPTY = 'Раздел пуст, загляните позже';
