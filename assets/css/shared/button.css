@@ -75,6 +75,10 @@
   --button-bg: var(--color-bg-secondary-highlight);
 }
 
+.button.is-style-primary.is-highlight {
+  --button-bg: var(--color-elem-secondary-highlight);
+}
+
 /* Sizes for buttons */
 
 .button.is-rounded {

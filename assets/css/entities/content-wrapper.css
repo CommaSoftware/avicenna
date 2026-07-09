@@ -18,10 +18,14 @@
 
 .content-wrapper.is-grid-3 > * {
   max-width: var(--space-column-4);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .content-wrapper.is-grid-4 > * {
   max-width: var(--space-column-3);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .content-wrapper.is-grid-3.is-scrolled-adaptation,
