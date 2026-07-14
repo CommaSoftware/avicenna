@@ -35,6 +35,7 @@
 				<?php wp_reset_postdata(); ?>
 			</div>
 		<?php endif; ?>
+		<?php wp_reset_postdata(); wp_reset_query(); ?>
 		<div class="content-wrapper">
 			<div class="buttons-block">
 				<a

@@ -70,6 +70,7 @@ $filials_query = new WP_Query($args);
               </div>
             </div>
           <?php endif; ?>
+          <?php wp_reset_postdata(); wp_reset_query(); ?>
           <?php if($theme_contacts_email != ''): ?>
             <div class="footer-contacts-line">
               <div

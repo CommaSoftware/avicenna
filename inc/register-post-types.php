@@ -51,7 +51,7 @@ function register_post_types(){
 		'show_ui'             => true, // Показываем в админке
 		'show_in_menu'        => true,
 		'show_in_admin_bar'   => true,
-		'show_in_rest'        => false, // add to the REST API. C WP 4.7
+		'show_in_rest'        => true, // add to the REST API. C WP 4.7
 		'rest_base'           => 'employee',
 		'capability_type'     => 'post',
 		'capabilities' => [
