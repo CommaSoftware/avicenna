@@ -2,7 +2,7 @@
 add_action('customize_register', function($wp_customize) {
 
 	$wp_customize->add_section('blog_view', [
-		'title'    => 'Блок «Блог»',
+		'title'    => 'Предпросмотр «Публикаций»',
 		'description' => 'Выводит последние опубликованные материалы типа «Запись», поддерживает закреплённые публикации',
 		'priority' => 40,
 		'panel' => 'sections_panel'

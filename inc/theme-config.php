@@ -4,7 +4,7 @@
  */
 
 // Theme prefix (used for functions, hooks, settings)
-define('THEME_PREFIX', 'mobilelectro');
+define('THEME_PREFIX', 'avicenna');
 
 class Theme_Defaults {
 
@@ -32,6 +32,7 @@ class Theme_Defaults {
 		const BLOG_HEADING = 'Публикации';
 		const BLOG_LINK = '/blog';
 		const BLOG_ANSWER_TO_EMPTY = 'Раздел пуст, загляните позже';
+		const BLOG_SHOW_FAQS = false;
 		const BLOG_SIDEBAR_SHOW_IN_BLOG = true;
 		const BLOG_SIDEBAR_SHOW_IN_POST = true;
 		const BLOG_SIDEBAR_THUMBNAIL = '/wp-content/themes/avicenna/assets/images/avatar.jpg';

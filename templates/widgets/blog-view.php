@@ -1,16 +1,29 @@
 <?php
+	$theme_blog_show_faqs = get_theme_mod("blog__show_faqs", Theme_Defaults::BLOG_SHOW_FAQS);
+	$theme_blog_view_show_on_front = get_theme_mod("blog_view__show_on_front", Theme_Defaults::BLOG_VIEW_SHOW_ON_FRONT);
+	$theme_blog_view_heading = get_theme_mod("blog_view__heading", Theme_Defaults::BLOG_VIEW_HEADING);
+	$theme_blog_view_description = get_theme_mod("blog_view__description", Theme_Defaults::BLOG_VIEW_DESCRIPTION);
+	$theme_blog_link = get_theme_mod('blog__link', Theme_Defaults::BLOG_LINK);
+
 	$args = array(
 		'posts_per_page' => 8,
 		'orderby' => 'date',
 		'order' => 'DESC',
 		'ignore_sticky_posts' => 0, // 0 - учитывать закреплённые, 1 - игнорировать
 	);
-	$query = new WP_Query($args);
 
-	$theme_blog_view_show_on_front = get_theme_mod("blog_view__show_on_front", Theme_Defaults::BLOG_VIEW_SHOW_ON_FRONT);
-	$theme_blog_view_heading = get_theme_mod("blog_view__heading", Theme_Defaults::BLOG_VIEW_HEADING);
-	$theme_blog_view_description = get_theme_mod("blog_view__description", Theme_Defaults::BLOG_VIEW_DESCRIPTION);
-	$theme_blog_link = get_theme_mod('blog__link', Theme_Defaults::BLOG_LINK);
+	if (!to_bool($theme_blog_show_faqs)) {
+		$args['tax_query'] = array(
+			array(
+				'taxonomy' => 'category',
+				'field'    => 'slug',
+				'terms'    => 'faqs',
+				'operator' => 'NOT IN'
+			)
+    );
+	}
+
+	$query = new WP_Query($args);
 ?>
 
 <?php if (is_front_page() && $theme_blog_view_show_on_front || !is_front_page()) : ?>

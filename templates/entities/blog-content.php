@@ -1,6 +1,7 @@
 <?php 
 	$theme_blog_answer_to_empty = get_theme_mod("blog__answer_to_empty", Theme_Defaults::BLOG_ANSWER_TO_EMPTY);
 	$theme_blog_show_sidebar = get_theme_mod("blog_sidebar__show_in_blog", Theme_Defaults::BLOG_SIDEBAR_SHOW_IN_BLOG);
+	$theme_blog_show_faqs = get_theme_mod("blog__show_faqs", Theme_Defaults::BLOG_SHOW_FAQS);
 
 	if ( get_query_var('paged') ) $paged = get_query_var('paged');
 	elseif ( get_query_var('page') ) $paged = get_query_var('page');
@@ -10,6 +11,17 @@
 		'post_type' => 'post',
 		'paged' => $paged,
 	);
+
+	if (!to_bool($theme_blog_show_faqs)) {
+		$args['tax_query'] = array(
+			array(
+				'taxonomy' => 'category',
+				'field'    => 'slug',
+				'terms'    => 'faqs',
+				'operator' => 'NOT IN'
+			)
+    );
+	}
 
 	if (is_category()) {
 		$args['cat'] = get_queried_object_id();
