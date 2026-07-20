@@ -13,16 +13,27 @@
 		'alt' => get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true) ?: get_the_title(),
 		'loading' => 'lazy'
 	));
+
+	$post_filial_title = get_post_filial_title();
+	$post_filial_link = get_post_filial_link();
 ?>
 
 <div class="blog-card <?php if(is_sticky()) { echo "is-pinned"; } ?>">
 	<div class="blog-card__header">
-		<time class="span is-size-xs is-secondary"><?php echo get_custom_post_date(); ?></time>
-		<?php if (!empty($post_categories)) : ?>
-			<?php foreach ($post_categories as $post_category) : ?>
-				<?php if ($post_category->term_id == $default_category_id) { continue; } ?>
-				<a class="blog-card__category button is-size-xs" href="<?php echo get_category_link($post_category->term_id) ?>"><?php echo $post_category->name ?></a>
-			<?php endforeach; ?>
+		<time class="blog-card-header__date span is-size-xs is-secondary"><?php echo get_custom_post_date(); ?></time>
+		<?php if (!empty($post_categories) || !empty($post_filial_title)) : ?>
+			<div class="blog-card-header__categories">
+				<?php if(!empty($post_filial_title)) : ?>
+					<a href="<?php echo $post_filial_link; ?>" class="button is-size-s is-style-transparent is-highlight is-no-hover">
+						<span class="icon" data-type="map-pin"></span>
+						<?php echo $post_filial_title; ?>
+					</a>
+				<?php endif; ?>
+				<?php foreach ($post_categories as $post_category) : ?>
+					<?php if ($post_category->term_id == $default_category_id) { continue; } ?>
+					<a class="blog-card__category button is-size-xs" href="<?php echo get_category_link($post_category->term_id) ?>"><?php echo $post_category->name ?></a>
+				<?php endforeach; ?>
+			</div>
 		<?php endif; ?>
 	</div>
 	<div class="blog-card__content">

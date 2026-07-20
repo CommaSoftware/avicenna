@@ -27,6 +27,8 @@ if ($single_header_style === 'thirty') { $single_header_style = 'is-style-thirty
 
 	<?php
 		$title = get_the_title();
+			$post_filial_title = get_post_filial_title();
+			$post_filial_link = get_post_filial_link();
 	?>
 
 	<?php if (!empty($title) || has_excerpt()) : ?>
@@ -44,6 +46,14 @@ if ($single_header_style === 'thirty') { $single_header_style = 'is-style-thirty
 			<?php $tags = get_the_terms( $post->ID, 'category' ); ?>
 			<? if( $tags ): ?>
 				<ul class="single-header__tags">
+					<?php if(!empty($post_filial_title)) : ?>
+						<li>
+							<a href="<?php echo $post_filial_link; ?>" class="button is-size-m is-rounded is-hilight">
+								<span class="icon" data-type="map-pin"></span>
+								<?php echo $post_filial_title; ?>
+							</a>
+						</li>
+					<?php endif; ?>
 					<?php foreach( $tags as $tag ): ?>
 						<li><a href="<?php echo get_term_link($tag) ?>" class="button is-size-m is-rounded is-hilight"><?php echo $tag->name; ?></a></li>
 					<?php endforeach; ?>

@@ -18,3 +18,9 @@ add_filter('excerpt_more', function($more) {
 if ( current_user_can( 'subscriber' ) ) {
 	show_admin_bar( false );
 }
+
+// --- Enabling excerpt support for pages ---
+add_action('init', 'add_excerpt_support_for_pages');
+function add_excerpt_support_for_pages() {
+    add_post_type_support('page', 'excerpt');
+}

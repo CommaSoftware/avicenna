@@ -30,6 +30,10 @@
   gap: 8px;
 }
 
+.flex.is-gap-4 {
+  gap: 4px;
+}
+
 .flex.is-wrap {
   flex-wrap: wrap;
 }

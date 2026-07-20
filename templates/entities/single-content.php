@@ -6,12 +6,11 @@
  * @param bool $show_sharing: Необязательный, по умолчанию True
 
  */
-
-$show_sidebar = isset($args['show_sidebar']) ? to_bool($args['show_sidebar']) : true;
-$show_sharing = isset($args['show_sharing']) ? to_bool($args['show_sharing']) : true;
 ?>
 
 <?php
+	$show_sidebar = isset($args['show_sidebar']) ? to_bool($args['show_sidebar']) : true;
+	$show_sharing = isset($args['show_sharing']) ? to_bool($args['show_sharing']) : true;
 	$show_thumbnail = has_post_thumbnail() && get_post_meta( get_the_ID(), 'hide_thumb_field', 1 ) != "true";
 	$show_content = get_post()->post_content !== '';
 ?>

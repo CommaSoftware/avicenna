@@ -20,9 +20,22 @@
   justify-content: space-between;
   gap: 8px;
   min-height: 24px;
+  padding-bottom: 2px;
 }
 
-.blog-card__category {
+.blog-card-header__date {
+  text-transform: lowercase;
+}
+
+.blog-card-header__categories {
+  max-width: calc(100% - 72px);
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.blog-card-header__categories .button {
   position: relative;
   z-index: 2;
 }
