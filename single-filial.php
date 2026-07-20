@@ -116,8 +116,9 @@
 		</div>
 	</section>
 	<?php get_template_part("templates/widgets/employees-view", null, ['filial_id' => $filial_id]) ?>
+	<?php get_template_part("templates/widgets/blog-view", null, ['filial_id' => $filial_id, 'use_pagination' => true ]) ?>
 <?php wp_reset_postdata(); endif; ?>
-
+	
 <?php get_template_part("templates/widgets/for-patient") ?>
 
 <?php get_footer(); ?>

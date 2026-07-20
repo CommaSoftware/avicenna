@@ -24,3 +24,15 @@ add_action('init', 'add_excerpt_support_for_pages');
 function add_excerpt_support_for_pages() {
     add_post_type_support('page', 'excerpt');
 }
+
+
+// --- Disable redirect for filials ---
+add_filter('redirect_canonical', 'custom_disable_redirect_canonical', 10, 2);
+
+function custom_disable_redirect_canonical($redirect_url, $requested_url) {
+    // Проверяем, что мы находимся на странице нашего типа записи 'filial'
+    if (is_singular('filial')) {
+        return false; // Полностью отключаем канонический редирект для этого CPT
+    }
+    return $redirect_url;
+}

@@ -8,7 +8,12 @@
 }
 
 body {
+  max-width: initial !important;
   min-height: 100vh;
   overflow-x: hidden;
   background-color: var(--color-bg-primary);
+}
+
+html {
+  overflow-x: initial !important;
 }

@@ -1,5 +1,6 @@
 <?php 
 $current_query = $args['query'] ?? false;
+$pagination_anchor = $args['anchor'] ?? '';
 ?>
 
 <div class="pagination">
@@ -7,7 +8,7 @@ $current_query = $args['query'] ?? false;
 		// пагинация для произвольного запроса
 		$big = 999999999; // уникальное число
 		echo paginate_links( array(
-		'base'    => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+		'base'    => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ) . $pagination_anchor,
 		'format'  => '?paged=%#%',
 		'total'   => $current_query->max_num_pages,
 		'current' => max( 1, get_query_var('paged') ),
