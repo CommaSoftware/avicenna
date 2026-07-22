@@ -152,7 +152,7 @@ $filials_query = new WP_Query($args);
 					<a
 						href="<?php echo $theme_privacy_link; ?>"
 						class="button is-size-s is-style-transparent is-hilight is-highlight"
-					>Пользовательское соглашение</a>
+					>Политика конфиденциальности</a>
 				<?php endif; ?>
 				<?php if($theme_offer_link != '' || $theme_offer_name != ''): ?>
 					<a

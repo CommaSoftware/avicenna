@@ -78,35 +78,35 @@
 										<span class="span is-size-s is-white"><?php echo $filial_address; ?></span>
 									<?php endif; ?>
 								</div>
-								<?php if (!empty($filial_gis2_url) || !empty($filial_appointment_url)) : ?>
-								<div class="flex is-gap-8 is-wrap-mobile">
-									<?php if (!empty($filial_appointment_url)) : ?>
-										<a
-											href="<?php echo $filial_gis2_url; ?>"
-											class="button is-size-l is-wide-full is-style-primary-alt"
-										>
-											<span class="icon is-color-clear" data-type="2gis"></span>
-											Открыть в 2GIS
-										</a>
-									<?php endif ?>
-									<?php if (!empty($filial_appointment_url)) : ?>
-										<a
-											href="<?php echo $filial_appointment_url; ?>"
-											target="_blank"
-											class="button is-size-l is-wide-full is-style-accent"
-										>
-											Записаться
-										</a>
-									<?php else : ?>
-										<a
-											href="<?php echo 'tel:'.$filial_phone; ?>"
-											target="_blank"
-											class="button is-size-l is-wide-full is-style-accent"
-										>
-											Позвонить
-										</a>
-									<?php endif; ?>
-								</div>
+								<?php if (!empty($filial_gis2_url) || !empty($filial_appointment_url) || !empty($filial_phone)) : ?>
+									<div class="flex is-gap-8 is-wrap-mobile">
+										<?php if (!empty($filial_gis2_url)) : ?>
+											<a
+												href="<?php echo $filial_gis2_url; ?>"
+												class="button is-size-l is-wide-full is-style-primary-alt"
+											>
+												<span class="icon is-color-clear" data-type="2gis"></span>
+												Открыть в 2GIS
+											</a>
+										<?php endif; ?>
+										<?php if (!empty($filial_appointment_url)) : ?>
+											<a
+												href="<?php echo $filial_appointment_url; ?>"
+												target="_blank"
+												class="button is-size-l is-wide-full is-style-accent"
+											>
+												Записаться
+											</a>
+										<?php elseif (!empty($filial_phone)) : ?>
+											<a
+												href="<?php echo 'tel:'.$filial_phone; ?>"
+												target="_blank"
+												class="button is-size-l is-wide-full is-style-accent"
+											>
+												Позвонить
+											</a>
+										<?php endif; ?>
+									</div>
 								<?php endif; ?>
 							</div>
 						</div>

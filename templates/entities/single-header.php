@@ -14,27 +14,26 @@ $single_header_style = isset($args['style']) ? $args['style'] : '';
 if ($single_header_style === 'secondary') { $single_header_style = 'is-style-secondary'; }
 if ($single_header_style === 'thirty') { $single_header_style = 'is-style-thirty'; }
 
+$post_title = get_the_title();
+$post_filial_title = get_post_filial_title();
+$post_filial_link = get_post_filial_link();
 ?>
 
 <?php $breadcrumb_blog = $show_blog_link ? ['name' => $theme_blog_heading, 'href' => $theme_blog_link] : null; ?>
+<?php $breadcrumb_filial = !empty($post_filial_title) ? ['name' => $post_filial_title, 'href' => $post_filial_link.'#blog_view'] : null; ?>
 
 <div class="single-header <?php echo $single_header_style; ?>">
 	<div class="content-wrapper">
 		<?php get_template_part('templates/entities/breadcrumbs', null, [
-			$breadcrumb_blog
+			$breadcrumb_blog,
+			$breadcrumb_filial
 		]); ?>
 	</div>
 
-	<?php
-		$title = get_the_title();
-			$post_filial_title = get_post_filial_title();
-			$post_filial_link = get_post_filial_link();
-	?>
-
-	<?php if (!empty($title) || has_excerpt()) : ?>
+	<?php if (!empty($post_title) || has_excerpt()) : ?>
 		<div class="content-wrapper cms-content">
-			<?php if (!empty($title)) : ?>
-				<h1><?php echo $title; ?></h1>
+			<?php if (!empty($post_title)) : ?>
+				<h1><?php echo $post_title; ?></h1>
 			<?php endif; ?>
 			<?php if ($show_time) : ?>
 				<time class="span is-size-xs is-secondary"><?php echo get_custom_post_date(); ?></time>

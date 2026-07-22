@@ -28,6 +28,7 @@ class Theme_Defaults {
 
 		const MAIN_BANNER_LOGO = false;
 		const MAIN_BANNER_LICENSE_LINK = '#!';
+		const MAIN_BANNER_HTML_BLOCK = '<iframe frameborder="0" width="150px" height="50px" src="https://widget.2gis.ru/api/widget?org_id=70000001031653121&amp;size=medium&amp;theme=light"></iframe>';
 
 		const BLOG_HEADING = 'Публикации';
 		const BLOG_LINK = '/blog';

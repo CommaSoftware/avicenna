@@ -28,8 +28,6 @@
 				<?php endif; ?>
 				<?php if ($show_content) : ?>
 					<?php the_content(); ?>
-				<?php else: ?>
-					<p>Раздел в процессе наполнения.</p>
 				<?php endif; ?>
 			</div>
 			<?php if ($show_content) : ?>

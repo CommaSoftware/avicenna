@@ -38,7 +38,13 @@
 			<?php echo $theme_blog_sidebar_description; ?>
 		</div>
 	<?php endif; ?>
-	<?php if($theme_contacts_tg_link != '' || $theme_contacts_max_link != '') : ?>
+	<?php if(
+		!empty($theme_contacts_tg_link) ||
+		!empty($theme_contacts_vk_link) ||
+		!empty($theme_contacts_max_link) ||
+		!empty($theme_blog_sidebar_button2_link) ||
+		!empty($theme_blog_sidebar_button1_link)
+	) : ?>
 		<div class="blog-author__actions">
 			<?php if ($theme_contacts_tg_link != ""): ?>
 				<a
@@ -68,27 +74,27 @@
 				></a>
 			<?php endif; ?>
 			<?php if ($theme_blog_sidebar_button2_link != ""): ?>
-					<a
-						href="<?php echo $theme_blog_sidebar_button2_link; ?>"
-						class="button is-size-l is-wide-full is-style-bordered"
-						>
-						<?php if ($theme_blog_sidebar_button2_icon != ""): ?>
-							<span class="icon" data-type="<?php echo $theme_blog_sidebar_button2_icon; ?>"></span>
-						<?php endif; ?>
-						<?php echo $theme_blog_sidebar_button2_name; ?>
-					</a>
-				<?php endif; ?>
-				<?php if ($theme_blog_sidebar_button1_link != ""): ?>
-					<a
-						href="<?php echo $theme_blog_sidebar_button1_link; ?>"
-						class="button is-size-l is-wide-full is-style-accent"
-						>
-						<?php if ($theme_blog_sidebar_button1_icon != ""): ?>
-							<span class="icon" data-type="<?php echo $theme_blog_sidebar_button1_icon; ?>"></span>
-						<?php endif; ?>
-						<?php echo $theme_blog_sidebar_button1_name; ?>
-					</a>
-				<?php endif; ?>
+				<a
+					href="<?php echo $theme_blog_sidebar_button2_link; ?>"
+					class="button is-size-l is-wide-full is-style-bordered"
+					>
+					<?php if ($theme_blog_sidebar_button2_icon != ""): ?>
+						<span class="icon" data-type="<?php echo $theme_blog_sidebar_button2_icon; ?>"></span>
+					<?php endif; ?>
+					<?php echo $theme_blog_sidebar_button2_name; ?>
+				</a>
+			<?php endif; ?>
+			<?php if ($theme_blog_sidebar_button1_link != ""): ?>
+				<a
+					href="<?php echo $theme_blog_sidebar_button1_link; ?>"
+					class="button is-size-l is-wide-full is-style-accent"
+					>
+					<?php if ($theme_blog_sidebar_button1_icon != ""): ?>
+						<span class="icon" data-type="<?php echo $theme_blog_sidebar_button1_icon; ?>"></span>
+					<?php endif; ?>
+					<?php echo $theme_blog_sidebar_button1_name; ?>
+				</a>
+			<?php endif; ?>
 		</div>
 	<?php endif; ?>
 </div>

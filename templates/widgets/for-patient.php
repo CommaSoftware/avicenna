@@ -22,33 +22,22 @@
     </div>
   </div>
   <div class="content-wrapper is-grid-4">
-    <?php foreach ($menu_items as $item) : 
-      // Получаем описание для публикации
-      $description = '';
-      if (!empty($item->url)) {
-          $description = get_content_description_by_url($item->url);
-      }
-      
-      // Если описание не найдено, используем стандартное описание меню
-      if (empty($description) && !empty($item->description)) {
-          $description = $item->description;
-      }
-    ?>
+    <?php foreach ($menu_items as $item) : ?>
       <div class="for-patients-card">
-          <div class="for-patients-card__header">
-              <h3 class="heading is-size-h5">
-                  <a href="<?php echo esc_url($item->url); ?>">
-                      <?php echo esc_html($item->title); ?>
-                  </a>
-              </h3>
-              <span class="icon" data-type="arrow-up-right-md"></span>
+        <div class="for-patients-card__header">
+          <h3 class="heading is-size-h5">
+            <a href="<?php echo esc_url($item->url); ?>">
+              <?php echo esc_html($item->title); ?>
+            </a>
+          </h3>
+          <span class="icon" data-type="arrow-up-right-md"></span>
+        </div>
+        <?php $description = $item->description; ?>
+        <?php if (!empty($description)) : ?>
+          <div class="for-patients-card__content">
+            <p><?php echo esc_html($description); ?></p>
           </div>
-          
-          <?php if (!empty($description)) : ?>
-              <div class="for-patients-card__content">
-                  <p><?php echo esc_html($description); ?></p>
-              </div>
-          <?php endif; ?>
+        <?php endif; ?>
       </div>
     <?php endforeach; ?>
   </div>

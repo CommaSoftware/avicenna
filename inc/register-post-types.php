@@ -16,6 +16,7 @@ function register_post_types(){
 			'menu_name'          => 'Филиалы', // menu name
 		],
 		'description'         => '',
+		'capability_type'     => 'page',
 		'public'              => true,
 		'show_in_menu'        => true, // whether to show it in the admin menu
 		'show_in_admin_bar'   => true, // depends on show_in_menu
@@ -23,13 +24,13 @@ function register_post_types(){
 		'rest_base'           => 'filial', // $post_type. C WP 4.7
 		'menu_position'       => null,
 		'menu_icon'           => null,
-		'hierarchical'        => false,
+		'hierarchical'        => true,
 		'supports'            => ['title', 'thumbnail', 'editor', 'author'], // 'title','editor','author','excerpt','trackbacks','comments','revisions','page-attributes','post-formats'
-		'has_archive'         => true,
+		'has_archive'         => false,
 		'rewrite'             => ['slug' => '/filials'],
 		'feeds'               => false,
 		'query_var'           => true,
-		'menu_icon'           => 'dashicons-admin-multisiteя',
+		'menu_icon'           => 'dashicons-admin-multisite',
 	]);
 	register_post_type('employee', [
 		'labels' => [
@@ -45,24 +46,18 @@ function register_post_types(){
         'not_found'          => 'Сотрудники не найдены',
         'not_found_in_trash' => 'В корзине нет Сотрудников',
 		],
-		'public'              => false, // Только для админов
-		'publicly_queryable'  => true,
-		'exclude_from_search' => true,
-		'show_ui'             => true, // Показываем в админке
+		'public'              => true,
+		'show_ui'             => true,
 		'show_in_menu'        => true,
 		'show_in_admin_bar'   => true,
 		'show_in_rest'        => true, // add to the REST API. C WP 4.7
 		'rest_base'           => 'employee',
 		'capability_type'     => 'post',
-		'capabilities' => [
-				'create_posts' => 'manage_options', // Только администраторы
-		],
-		'map_meta_cap'        => true,
 		'hierarchical'        => false,
-		'supports'            => ['title', 'thumbnail', 'editor', 'author'], // Комментарии для отчётов
+		'supports'            => ['title', 'thumbnail', 'editor', 'author'],
 		'has_archive'         => false,
 		'rewrite'             => ['slug' => '/employee'],
-		'query_var'           => false,
+		'query_var'           => true,
 		'menu_icon'           => 'dashicons-id-alt',
 		'menu_position'       => 25,
 	]);

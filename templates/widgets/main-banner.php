@@ -1,6 +1,7 @@
 <?php
 	$theme_main_banner_logo = get_theme_mod('main_banner__logo', Theme_Defaults::MAIN_BANNER_LOGO);
 	$theme_main_banner_license_link = get_theme_mod('main_banner__license_link', Theme_Defaults::MAIN_BANNER_LICENSE_LINK);
+	$theme_main_banner_html_block = get_theme_mod('main_banner__html_block', Theme_Defaults::MAIN_BANNER_HTML_BLOCK);
 ?>
 
 <section id="main_banner" class="main-banner bg-highlight is-has-gradient">
@@ -18,6 +19,9 @@
 				Действительная лицензия
 				<span class="icon" data-type="chervon-right"></span>
 			</a>
+		<?php endif; ?>
+		<?php if (!empty($theme_main_banner_html_block)): ?>
+			<?php echo $theme_main_banner_html_block; ?>
 		<?php endif; ?>
 	</div>
 </section>

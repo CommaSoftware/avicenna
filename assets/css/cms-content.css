@@ -65,11 +65,6 @@
   color: var(--cms-content-color-accent);
 }
 
-.cms-content h6 {
-  --heading-font-size: var(--font-size-h6);
-  color: var(--cms-content-color-accent);
-}
-
 .cms-content p,
 .cms-content li {
   color: var(--cms-content-color-primary);
@@ -127,6 +122,7 @@
   background-color: var(--color-bg-secondary-highlight);
 }
 
+.cms-content h6,
 .cms-content cite {
   color: var(--cms-content-color-secondary);
   font-size: var(--font-size-span-xs);

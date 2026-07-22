@@ -46,6 +46,6 @@ add_action('customize_register', function($wp_customize) {
 	$wp_customize->add_control('contacts__vk_link', [
 		'type'    => 'text',
 		'section' => 'contacts',
-		'label'   => __('Ссылка на MAX', THEME_PREFIX),
+		'label'   => __('Ссылка на VK', THEME_PREFIX),
 	]);
 });

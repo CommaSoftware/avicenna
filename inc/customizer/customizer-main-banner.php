@@ -29,4 +29,15 @@ add_action('customize_register', function($wp_customize) {
 		'section' => 'main_banner',
 		'label'   => __('Ссылка на лицензию клиники', THEME_PREFIX),
 	]);
+
+	// Main banner HTML block
+	$wp_customize->add_setting('main_banner__html_block', [
+		'default' => Theme_Defaults::MAIN_BANNER_HTML_BLOCK,
+	]);
+	$wp_customize->add_control('main_banner__html_block', [
+		'type'        => 'text',
+		'section'     => 'main_banner',
+		'label'       => __('HTML блок', THEME_PREFIX),
+		'description' => __('Будьте внимательны! Встраивайте только код, в безопасности которого уверены!', THEME_PREFIX),
+	]);
 });

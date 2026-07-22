@@ -26,7 +26,7 @@ function add_excerpt_support_for_pages() {
 }
 
 
-// --- Disable redirect for filials ---
+// --- Config redirects for filials ---
 add_filter('redirect_canonical', 'custom_disable_redirect_canonical', 10, 2);
 
 function custom_disable_redirect_canonical($redirect_url, $requested_url) {
@@ -35,4 +35,12 @@ function custom_disable_redirect_canonical($redirect_url, $requested_url) {
         return false; // Полностью отключаем канонический редирект для этого CPT
     }
     return $redirect_url;
+}
+
+add_action('template_redirect', 'redirect_filials_to_hash');
+function redirect_filials_to_hash() {
+    if (is_page('filials') || $_SERVER['REQUEST_URI'] == '/filials' || $_SERVER['REQUEST_URI'] == '/filials/') {
+        wp_redirect(home_url('/#filials'), 301);
+        exit;
+    }
 }
