@@ -15,7 +15,7 @@
 
 	<!-- Meta for social network -->
 	<meta property="og:title" content="<?php wp_title('–', true, 'right');?> <?php bloginfo('name'); ?>" />
-	<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/screenshot-short.png" />
+	<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/images/cover.jpg" />
 
 	<?php echo get_theme_mod('title_tagline__head_code', ''); ?>
 

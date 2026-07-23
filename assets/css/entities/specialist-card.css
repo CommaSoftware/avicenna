@@ -17,6 +17,14 @@
   margin-bottom: 16px;
 }
 
+.specialist-card .span.is-size-xs {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .specialist-card__cover {
   width: 120px;
   min-width: 120px;
@@ -63,6 +71,13 @@
 .single-header .specialist-card {
   display: flex;
   gap: 12px;
+}
+
+@media screen and (min-width: 681px) {
+  .specialist-card .flex.is-gap-8.is-dir-col.is-justify-sb.is-wide-full {
+    position: relative;
+    max-width: calc(100% - 208px);
+  }
 }
 
 @media screen and (max-width: 680px) {

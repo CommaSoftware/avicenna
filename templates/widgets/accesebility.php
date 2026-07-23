@@ -5,8 +5,12 @@
 				trigger.addEventListener('click', function(e) {
 						e.preventDefault();
 						let pluginButton = document.querySelector('#evas-panel-toggle');
-						if (pluginButton) {
-								pluginButton.click();
+						let defaultButtonSetting = document.querySelector('#evas-action-light-contrast');
+						if (!!pluginButton) {
+							pluginButton.click();
+						}
+						if (!!defaultButtonSetting) {
+							defaultButtonSetting.click();
 						}
 				});
 		}
@@ -16,5 +20,13 @@
 	.evas-toggle-wrapper {
 		pointer-events: none !important;
 		opacity: 0;
+	}
+
+	@media screen and (max-width: 480px) {
+		#evas-panel.evas-position-bottom-right {
+			right: 0;
+			bottom: 0px;
+			left: 0px;
+		}
 	}
 </style>
