@@ -44,6 +44,7 @@ function styles_n_scripts() {
 	enqueue_versioned_style( 'style-widgets-main-banner',        '/assets/css/widgets/main-banner.css' );
 	enqueue_versioned_style( 'style-widgets-not-found',          '/assets/css/widgets/not-found.css' );
 	enqueue_versioned_style( 'style-widgets-single',             '/assets/css/widgets/single.css' );
+	enqueue_versioned_style( 'style-widgets-search',             '/assets/css/widgets/search.css' );
 	
 	// Scripts
 	enqueue_versioned_script( 'script-clipboard',                '/assets/js/clipboard.js', array(), true );

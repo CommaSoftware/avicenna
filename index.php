@@ -6,5 +6,6 @@
 <?php get_template_part("templates/widgets/for-patient") ?>
 <?php get_template_part("templates/widgets/faqs-view") ?>
 <?php get_template_part("templates/widgets/blog-view", null, ['posts_per_page' => 8]) ?>
+<?php get_template_part("templates/widgets/custom-html") ?>
 
 <?php get_footer(); ?>

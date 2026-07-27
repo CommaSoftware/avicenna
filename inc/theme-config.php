@@ -25,6 +25,8 @@ class Theme_Defaults {
 		const FOOTER_OFFER_LINK = '/offer-info';
 		const FOOTER_LICENSES_LINK = '/licenses';
 
+		const CUSTOM_HTML_SHOW = false;
+		const CUSTOM_HTML_CODE = '<div class="content-wrapper"></div>';
 
 		const MAIN_BANNER_LOGO = false;
 		const MAIN_BANNER_LICENSE_LINK = '#!';

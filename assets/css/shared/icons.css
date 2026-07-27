@@ -149,6 +149,9 @@
 .icon[data-type="ruler"] {
   background-image: url("../../images/icons/ruler.svg");
 }
+.icon[data-type="search"] {
+  background-image: url("../../images/icons/search.svg");
+}
 .icon[data-type="shopping-bag"] {
   background-image: url("../../images/icons/shopping-bag.svg");
 }

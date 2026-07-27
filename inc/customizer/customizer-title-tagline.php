@@ -10,7 +10,7 @@ add_action('customize_register', function($wp_customize) {
 			'description' => __('Будьте внимательны! Встраивайте только код, в безопасности которого уверены!', THEME_PREFIX),
 			'section' => 'title_tagline',
 			'settings' => 'title_tagline__head_code',
-			'type' => 'text',
+			'type' => 'textarea',
 		)
 	);
 });

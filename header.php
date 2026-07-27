@@ -141,6 +141,9 @@
 			] ); ?>
 		</nav>
 		<div class="header__actions">
+			<a href="<?php echo home_url('?s='); ?>" class="button is-aspect-ratio-1b1">
+				<span class="icon" data-type="search"></span>
+			</a>
 			<?php if ($theme_header_button1_link != ""): ?>
 				<a
 					href="<?php echo $theme_header_button1_link; ?>"
