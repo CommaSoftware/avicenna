@@ -23,7 +23,7 @@
 </head>
 <body>
 	<script>
-		const COUNTER_CODE = <?php echo wp_json_encode( get_theme_mod('title_tagline__counter', '') ); ?>;
+		const COUNTER_ID = "<?php echo esc_html(get_theme_mod('title_tagline__ya_metrika_id', '')); ?>";
 	</script>
 <?php
 	$theme_header_logo = get_theme_mod('header__logo', Theme_Defaults::HEADER_LOGO);

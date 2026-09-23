@@ -14,17 +14,30 @@ add_action('customize_register', function($wp_customize) {
 		)
 	);
 
-	$wp_customize->add_setting('title_tagline__counter',[
+	// $wp_customize->add_setting('title_tagline__counter',[
+	// 		'default' => '',
+	// ]);
+	// $wp_customize->add_control(
+	// 	'title_tagline__counter',
+	// 	array(
+	// 		'label' => __('HTML код счётчика посещаемости', THEME_PREFIX),
+	// 		'description' => __('Будьте внимательны! Встраивайте только код, в безопасности которого уверены!', THEME_PREFIX),
+	// 		'section' => 'title_tagline',
+	// 		'settings' => 'title_tagline__counter',
+	// 		'type' => 'textarea',
+	// 	)
+	// );
+
+	$wp_customize->add_setting('title_tagline__ya_metrika_id',[
 			'default' => '',
 	]);
 	$wp_customize->add_control(
-		'title_tagline__counter',
+		'title_tagline__ya_metrika_id',
 		array(
-			'label' => __('HTML код счётчика посещаемости', THEME_PREFIX),
-			'description' => __('Будьте внимательны! Встраивайте только код, в безопасности которого уверены!', THEME_PREFIX),
+			'label' => __('ID счётчика Яндекс Метрика', THEME_PREFIX),
 			'section' => 'title_tagline',
-			'settings' => 'title_tagline__counter',
-			'type' => 'textarea',
+			'settings' => 'title_tagline__ya_metrika_id',
+			'type' => 'text',
 		)
 	);
 
