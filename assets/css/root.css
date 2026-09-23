@@ -66,6 +66,11 @@
     var(--color-bg-secondary-highlight),
     var(--color-border-secondary)
   );
+  --gradient-slider-bg: radial-gradient(
+    at center bottom,
+    var(--color-elem-secondary-highlight),
+    var(--color-elem-primary-highlight)
+  );
 
   /* Shadows */
   --shadow-button: 0px 1px 2px -1px var(--color-elem-primary);
