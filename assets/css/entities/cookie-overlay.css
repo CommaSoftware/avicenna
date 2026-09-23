@@ -25,7 +25,7 @@
 
   box-sizing: border-box;
   min-width: var(--space-column-4);
-  max-width: var(--space-column-6);
+  max-width: var(--space-column-8);
   margin-left: auto;
   padding: 12px;
 

@@ -12,6 +12,8 @@ class Theme_Defaults {
 		const CONTACTS_TG_LINK = '';
 		const CONTACTS_MAX_LINK = '#!';
 		const CONTACTS_VK_LINK = '#!';
+
+		const TITLE_TAGLINE_COUNTER_ALERT = 'Данный сайт использует файлы cookie и сервисы веб-аналитики, что позволяет нам сделать сайт удобнее и лучше для вас. Нажав кнопку «Принять», вы даете <a href="/cookie-confirmation">согласие на обработку файлов cookie</a> и соглашаетесь с <a href="/privacy-policy">Политикой конфиденциальности</a>.';
 		
 		const HEADER_LOGO = false; 
 		const HEADER_BUTTON1_ICON = ''; 

@@ -22,7 +22,9 @@
 	<?php wp_head(); ?>
 </head>
 <body>
-
+	<script>
+		const COUNTER_CODE = <?php echo wp_json_encode( get_theme_mod('title_tagline__counter', '') ); ?>;
+	</script>
 <?php
 	$theme_header_logo = get_theme_mod('header__logo', Theme_Defaults::HEADER_LOGO);
 	$theme_contacts_tg_link = get_theme_mod('contacts__tg_link', Theme_Defaults::CONTACTS_TG_LINK);

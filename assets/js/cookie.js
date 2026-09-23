@@ -20,9 +20,25 @@ function closeCookieOverlay() {
   let cookie_date = new Date();
   cookie_date.setYear(cookie_date.getFullYear() + 1);
   document.cookie = "agreeToCookie=1;expires=" + cookie_date.toUTCString();
-
+  showCounter();
   document.querySelector("#cookie_overlay").remove();
 }
 
 setTimeout(showCookieOverlay, 1000);
 //--------------- Cookie-confirm Overlay (end) ---------------//
+
+//-------------------- Показать счётчик (start) --------------------//
+var counterInitialized = false;
+// CONST COUNTER_CODE инициализирован в header.php
+
+function showCounter() {
+  if (!!Number(getCookie("agreeToCookie"))) {
+    let counter = document.createElement("div");
+    counter.setAttribute("id", "counter_code");
+    counter.innerHTML = COUNTER_CODE;
+    document.body.prepend(counter);
+  }
+}
+
+showCounter();
+//-------------------- Показать счётчик (end) ----------------------//
