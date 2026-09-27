@@ -40,6 +40,11 @@
   --button-bg: var(--button-color-preset-primary);
 }
 
+.button.is-style-primary-alt {
+  --button-color-text: var(--button-color-preset-primary);
+  --button-bg: var(--color-elem-primary-alt);
+}
+
 .button.is-style-secondary {
   --button-color-text: var(--button-color-preset-primary);
   --button-bg: var(--color-bg-tertiary);
@@ -174,6 +179,12 @@
 .button:not(.is-no-hover):hover,
 .button:not(.is-no-hover):active {
   --button-bg: var(--color-bg-tertiary-highlight);
+  --button-color-text: var(--button-color-hovered);
+}
+
+.button.is-style-primary-alt:not(.is-no-hover):hover,
+.button.is-style-primary-alt:not(.is-no-hover):active {
+  --button-bg: var(--color-elem-primary-alt);
   --button-color-text: var(--button-color-hovered);
 }
 

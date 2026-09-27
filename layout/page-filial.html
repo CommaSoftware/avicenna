@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="../assets/css/entities/blog-card.css" />
     <link rel="stylesheet" href="../assets/css/entities/filial-card.css" />
     <link rel="stylesheet" href="../assets/css/entities/breadcrumbs.css" />
+    <link rel="stylesheet" href="../assets/css/entities/service-card.css" />
     <link
       rel="stylesheet"
       href="../assets/css/entities/for-patients-card.css"
@@ -152,8 +153,10 @@
         </div>
       </div>
     </header>
-    <section id="slider" class="slider">
-      <div class="slider__item content-wrapper">
+    <section id="slider" class="slider" data-autoalide="3500">
+      <div id="sliderButtonLeft" class="slider__nav-button"></div>
+      <div id="sliderButtonRight" class="slider__nav-button"></div>
+      <div class="slider__item content-wrapper is-active-item">
         <div class="slider-item__content">
           <h3 class="heading is-size-h1 is-white">Заголовок №1</h3>
           <span class="span is-white">Описание №1</span>
@@ -166,13 +169,81 @@
           <div class="slider__ellipsis">
             <span data-number="1" class="is-active"></span>
             <span data-number="2"></span>
-            <span data-number="3"></span>
-            <span data-number="4"></span>
-            <span data-number="5"></span>
           </div>
         </div>
         <div class="slider-item__image">
           <img src="../assets/images/examples/slider-1.jpg" alt="" />
+        </div>
+      </div>
+      <div class="slider__item content-wrapper">
+        <div class="slider-item__content">
+          <h3 class="heading is-size-h1 is-white">Заголовок №2</h3>
+          <span class="span is-white">Описание №2</span>
+          <div class="slider-item-content__buttons">
+            <a href="#!" class="button is-rounded is-wide is-style-accent"
+              >Записаться</a
+            >
+            <a href="#!" class="button is-rounded is-wide">Подробнее</a>
+          </div>
+        </div>
+        <div class="slider-item__image">
+          <img src="../assets/images/examples/service-checkup-1.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+    <section id="specialists">
+      <div class="content-wrapper">
+        <div class="heading-block">
+          <h2 class="heading is-size-h2">Чек-апы</h2>
+        </div>
+      </div>
+      <div class="content-wrapper is-grid-4 is-scrolled-adaptation">
+        <div class="service-card">
+          <div class="service-card__cover">
+            <img src="../assets/images/examples/service-checkup-1.jpg" alt="" />
+          </div>
+          <h3 class="heading is-size-h5">Первый полный осмотр зрения</h3>
+          <p class="span is-size-xs">
+            Комплексная проверка зрения ребёнка первого года жизни
+          </p>
+          <div class="service-card__tags">
+            <span class="span is-size-xs is-highlight">2999 ₽</span>
+            <span class="span is-size-xs is-secondary">Чек-ап</span>
+          </div>
+          <div class="flex is-gap-8 is-wrap-mobile">
+            <a
+              href="#!"
+              class="service-card__readmore button is-wide-full is-style-primary-alt"
+              >Подробнее</a
+            >
+            <a href="#!" class="button is-wide-full is-style-accent"
+              >Записаться</a
+            >
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card__cover">
+            <img src="../assets/images/examples/service-checkup-1.jpg" alt="" />
+          </div>
+          <h3 class="heading is-size-h5">Первый полный осмотр зрения</h3>
+          <p class="span is-size-xs">
+            Комплексная проверка зрения ребёнка первого года жизни Lorem ipsum
+            dolor, sit amet consectetur adipisicing elit. Molestias, cumque?
+          </p>
+          <div class="service-card__tags">
+            <span class="span is-size-xs is-highlight">2999 ₽</span>
+            <span class="span is-size-xs is-secondary">Чек-ап</span>
+          </div>
+          <div class="flex is-gap-8 is-wrap-mobile">
+            <a
+              href="#!"
+              class="service-card__readmore button is-wide-full is-style-primary-alt"
+              >Подробнее</a
+            >
+            <a href="#!" class="button is-wide-full is-style-accent"
+              >Записаться</a
+            >
+          </div>
         </div>
       </div>
     </section>
@@ -656,5 +727,6 @@
     <script src="../assets/js/header.js"></script>
     <script src="../assets/js/popup.js"></script>
     <script src="../assets/js/smooth-scroll.js"></script>
+    <script src="../assets/js/slider.js"></script>
   </body>
 </html>
