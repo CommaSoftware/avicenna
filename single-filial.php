@@ -25,10 +25,10 @@
 	$filial_gis2_url = esc_url(get_filial_gis2_url());
 	?>
 
-	<div class="content-wrapper heading-block is-zero-padding">
+	<?php get_template_part("templates/widgets/slider-view", null, ['filial_id' => $filial_id ]) ?>
+	<div id="breadcrumbs" class="content-wrapper heading-block is-zero-padding">
 		<?php get_template_part('templates/entities/breadcrumbs', null, [['name' => $filial_title]]); ?>
 	</div>
-
 	<?php get_template_part("templates/widgets/blog-view", null, ['filial_id' => $filial_id, 'use_pagination' => true ]) ?>
 	<?php get_template_part("templates/widgets/services-view", null, ['filial_id' => $filial_id, 'service_type' => 'check-up']) ?>
 	<?php get_template_part("templates/widgets/services-view", null, ['filial_id' => $filial_id, 'service_type' => 'programs']) ?>

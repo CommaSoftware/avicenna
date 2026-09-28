@@ -1,3 +1,7 @@
+#breadcrumbs + section:has(.heading-block) .heading-block {
+  padding-top: var(--gap-blocks);
+}
+
 .breadcrumbs {
   display: flex;
   flex-wrap: wrap;

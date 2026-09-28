@@ -5,7 +5,7 @@
    * Инициализация слайдера.
    * @param {string|HTMLElement} root - селектор или сам элемент слайдера.
    * @param {Object} [options]
-   * @param {number} [options.interval] - авто-переключение в мс (перебивает data-autoalide).
+   * @param {number} [options.interval] - авто-переключение в мс (перебивает data-autoslide).
    * @param {boolean} [options.loop] - зацикливать слайды (по умолчанию true).
    * @param {string} [options.buttonLeftSelector] - селектор кнопки "назад".
    * @param {string} [options.buttonRightSelector] - селектор кнопки "вперёд".
@@ -24,12 +24,12 @@
       options || {},
     );
 
-    // Приоритет: options.interval → data-autoalide → 0 (выключено)
+    // Приоритет: options.interval → data-autsalide → 0 (выключено)
     var autoInterval = 0;
     if (typeof opts.interval === "number" && opts.interval > 0) {
       autoInterval = opts.interval;
     } else {
-      var dataAttr = slider.getAttribute("data-autoalide");
+      var dataAttr = slider.getAttribute("data-autoslide");
       if (dataAttr !== null) {
         var parsed = parseInt(dataAttr, 10);
         if (!isNaN(parsed) && parsed > 0) {

@@ -55,6 +55,7 @@ function styles_n_scripts() {
 	enqueue_versioned_script( 'script-header',                   '/assets/js/header.js', array(), true );
 	enqueue_versioned_script( 'script-popup',                    '/assets/js/popup.js', array(), true );
 	enqueue_versioned_script( 'script-smooth-scroll',            '/assets/js/smooth-scroll.js', array(), true );
+	enqueue_versioned_script( 'script-slider',            '/assets/js/slider.js', array(), true );
 
 }
 add_action( 'wp_enqueue_scripts', 'styles_n_scripts' );

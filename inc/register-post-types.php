@@ -90,5 +90,34 @@ function register_post_types(){
 		'menu_icon'           => 'dashicons-store',
 		'menu_position'       => 25,
 	]);
+	register_post_type('slides', [
+		'labels' => [
+        'name'               => 'Слайдеры',
+        'singular_name'      => 'Элемент слайдера',
+        'menu_name'          => 'Слайдеры',
+        'add_new'            => 'Добавить элемент слайдера',
+        'add_new_item'       => 'Добавить новый',
+        'edit_item'          => 'Редактировать элемент слайдера',
+        'new_item'           => 'Новый элемент слайдера',
+        'view_item'          => 'Просмотреть элемент слайдера',
+        'search_items'       => 'Искать элемент слайдера',
+        'not_found'          => 'Услуги не найдены',
+        'not_found_in_trash' => 'В корзине нет Услуг',
+		],
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_admin_bar'   => true,
+		'show_in_rest'        => false, // add to the REST API. C WP 4.7
+		'rest_base'           => 'slides',
+		'capability_type'     => 'post',
+		'hierarchical'        => false,
+		'supports'            => ['title', 'thumbnail', 'excerpt', 'author'],
+		'has_archive'         => false,
+		'rewrite'             => false,
+		'query_var'           => true,
+		'menu_icon'           => 'dashicons-images-alt',
+		'menu_position'       => 25,
+	]);
 }
 add_action( 'init', 'register_post_types' );
