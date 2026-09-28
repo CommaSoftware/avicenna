@@ -9,7 +9,7 @@
 
 <?php if( have_posts() ) : the_post(); ?>
 
-	<?php 
+<?php 
 	$filial_id = get_the_ID();
 	$filial_title = get_the_title();
 	$filial_thumbnail = get_the_post_thumbnail($filial_id, 'medium', array(
@@ -25,10 +25,17 @@
 	$filial_gis2_url = esc_url(get_filial_gis2_url());
 	?>
 
+	<div class="content-wrapper heading-block is-zero-padding">
+		<?php get_template_part('templates/entities/breadcrumbs', null, [['name' => $filial_title]]); ?>
+	</div>
+
+	<?php get_template_part("templates/widgets/blog-view", null, ['filial_id' => $filial_id, 'use_pagination' => true ]) ?>
+	<?php get_template_part("templates/widgets/services-view", null, ['filial_id' => $filial_id, 'service_type' => 'check-up']) ?>
+	<?php get_template_part("templates/widgets/services-view", null, ['filial_id' => $filial_id, 'service_type' => 'programs']) ?>
+
 	<section id="filial" class="filial">
 		<div class="content-wrapper">
 			<div class="filial-content">
-				<?php get_template_part('templates/entities/breadcrumbs', null, [['name' => $filial_title]]); ?>
 				<div class="cms-content">
 					<?php the_content(); ?>
 				</div>
@@ -116,7 +123,6 @@
 		</div>
 	</section>
 	<?php get_template_part("templates/widgets/employees-view", null, ['filial_id' => $filial_id]) ?>
-	<?php get_template_part("templates/widgets/blog-view", null, ['filial_id' => $filial_id, 'use_pagination' => true ]) ?>
 <?php wp_reset_postdata(); endif; ?>
 	
 <?php get_template_part("templates/widgets/for-patient") ?>

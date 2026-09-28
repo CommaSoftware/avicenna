@@ -61,5 +61,34 @@ function register_post_types(){
 		'menu_icon'           => 'dashicons-id-alt',
 		'menu_position'       => 25,
 	]);
+	register_post_type('service', [
+		'labels' => [
+        'name'               => 'Услуги',
+        'singular_name'      => 'Услуга',
+        'menu_name'          => 'Услуги',
+        'add_new'            => 'Добавить Услугу',
+        'add_new_item'       => 'Добавить новую',
+        'edit_item'          => 'Редактировать Услугу',
+        'new_item'           => 'Новая Услуга',
+        'view_item'          => 'Просмотреть Услугу',
+        'search_items'       => 'Искать Услугу',
+        'not_found'          => 'Услуги не найдены',
+        'not_found_in_trash' => 'В корзине нет Услуг',
+		],
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_admin_bar'   => true,
+		'show_in_rest'        => true, // add to the REST API. C WP 4.7
+		'rest_base'           => 'service',
+		'capability_type'     => 'post',
+		'hierarchical'        => false,
+		'supports'            => ['title', 'thumbnail', 'excerpt', 'editor', 'author'],
+		'has_archive'         => false,
+		'rewrite'             => ['slug' => '/service'],
+		'query_var'           => true,
+		'menu_icon'           => 'dashicons-store',
+		'menu_position'       => 25,
+	]);
 }
 add_action( 'init', 'register_post_types' );

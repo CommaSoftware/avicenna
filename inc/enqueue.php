@@ -33,6 +33,7 @@ function styles_n_scripts() {
 	enqueue_versioned_style( 'style-entities-popup',             '/assets/css/entities/popup.css' );
 	enqueue_versioned_style( 'style-entities-section-header',    '/assets/css/entities/section-header.css' );
 	enqueue_versioned_style( 'style-entities-specialist-card',   '/assets/css/entities/specialist-card.css' );
+	enqueue_versioned_style( 'style-entities-service-card',   '/assets/css/entities/service-card.css' );
 	
 	// Widget components
 	enqueue_versioned_style( 'style-widgets-blog',               '/assets/css/widgets/blog.css' );
@@ -45,6 +46,7 @@ function styles_n_scripts() {
 	enqueue_versioned_style( 'style-widgets-not-found',          '/assets/css/widgets/not-found.css' );
 	enqueue_versioned_style( 'style-widgets-single',             '/assets/css/widgets/single.css' );
 	enqueue_versioned_style( 'style-widgets-search',             '/assets/css/widgets/search.css' );
+	enqueue_versioned_style( 'style-widgets-slider',             '/assets/css/widgets/slider.css' );
 	
 	// Scripts
 	enqueue_versioned_script( 'script-clipboard',                '/assets/js/clipboard.js', array(), true );

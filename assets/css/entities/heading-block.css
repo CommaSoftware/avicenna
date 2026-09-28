@@ -3,6 +3,9 @@
   flex-direction: column;
   align-items: center;
   gap: 4px;
+}
+
+.heading-block:not(.is-zero-padding) {
   padding-top: var(--gap-sections);
 }
 
