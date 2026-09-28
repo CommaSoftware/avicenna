@@ -30,6 +30,10 @@
   width: 100%;
 }
 
+.single-header .button.is-wide {
+  width: fit-content;
+}
+
 .single-header__tags,
 .cms-content .single-header__tags {
   display: flex;
