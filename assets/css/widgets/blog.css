@@ -32,7 +32,7 @@
 
 .blog-author__header {
   display: flex;
-  padding: 16px 0;
+  padding-bottom: 16px;
 }
 
 .blog-author-header__avatar {

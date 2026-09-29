@@ -17,9 +17,6 @@
 
 
 <div class="blog-author">
-	<span class="blog-author__subheading span is-size-xs is-hilight"
-		>Автор</span
-	>
 	<div class="blog-author__header">
 		<?php if($theme_blog_sidebar_thumbnail != '') : ?>
 			<img

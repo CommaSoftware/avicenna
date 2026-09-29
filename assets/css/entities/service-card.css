@@ -10,13 +10,14 @@
 }
 
 .service-card__cover {
-  padding-bottom: 8px;
+  margin-bottom: 8px;
+  aspect-ratio: 16/9;
 }
 
 .service-card__cover img {
   display: block;
   width: 100%;
-  aspect-ratio: 16/9;
+  height: 100%;
   object-fit: cover;
 }
 
